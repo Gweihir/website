@@ -1,16 +1,19 @@
-import type { NextPage } from "next"
 import Head from "next/head"
-import Image from "next/image"
+import { Inter } from "@next/font/google"
+import styles from "@/styles/Home.module.css"
+import HomePage from "./home"
+import Technologies from "./technologies"
 
-const Home: NextPage = () => {
+const inter = Inter({ subsets: ["latin"] })
+
+export default function Home() {
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center py-2'>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>Project Gweihir</title>
       </Head>
-    </div>
+      <HomePage />
+      <Technologies />
+    </>
   )
 }
-
-export default Home
