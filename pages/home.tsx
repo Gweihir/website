@@ -5,6 +5,7 @@ type Props = {}
 export default function HomePage(props: Props) {
   return (
     <div className='bg-gray-900 min-h-screen flex flex-col'>
+      <div className='' />
       <main className='flex-1 py-8 px-6'>
         <section className='text-center'>
           <h1 className='text-white text-3xl font-medium'>Welcome to My Dark Themed Website</h1>

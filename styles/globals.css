@@ -9,3 +9,16 @@
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
     "Courier New", monospace;
 }
+
+.animated-path {
+  animation: animatePath 4s linear infinite;
+}
+
+@keyframes animatePath {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -100;
+  }
+}

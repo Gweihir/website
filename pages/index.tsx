@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google"
 import styles from "@/styles/Home.module.css"
 import HomePage from "./home"
 import Technologies from "./technologies"
+import BackgroundHome from "../original_components/BackgroundHome"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -12,8 +13,10 @@ export default function Home() {
       <Head>
         <title>Project Gweihir</title>
       </Head>
-      <HomePage />
-      <Technologies />
+      <BackgroundHome>
+        <HomePage />
+      </BackgroundHome>
+      {/* <Technologies /> */}
     </>
   )
 }
