@@ -20,8 +20,8 @@ const NavBar = () => {
           <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/technologies'>
             Technologies
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/idealusers'>
-            Ideal Users
+          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/ourusers'>
+            Our Users
           </Link>
           <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/documentation'>
             Documentation
