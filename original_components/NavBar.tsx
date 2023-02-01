@@ -5,7 +5,7 @@ import Logo from "../public/Images/logo_2_Layer.png"
 
 const NavBar = () => {
   return (
-    <nav className='bg-gray-800'>
+    <nav className='bg-gray-800 z-50'>
       <div className='container mx-auto px-5 py-4 flex items-center justify-between text-white'>
         <Link href='/' className='container flex items-center justify-left max-w-max'>
           <Image

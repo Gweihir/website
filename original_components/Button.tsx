@@ -9,7 +9,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ buttonText, onClick, className = "" }) => (
   <button
     onClick={onClick}
-    className={`py-2 px-4 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-600 ${className}`}
+    className={`py-2 px-4 rounded-lg text-black bg-primary hover:bg-secondary active:bg-accent ${className}`}
   >
     {buttonText}
   </button>

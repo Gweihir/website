@@ -5,6 +5,7 @@ import HomePage from "./home"
 import Technologies from "./technologies"
 import BackgroundHome from "../original_components/Background/BackgroundHome"
 import Hexagon from "@/original_components/Hexagon/Hexagon"
+import NavBar from "@/original_components/NavBar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,6 +15,8 @@ export default function Home() {
       <Head>
         <title>Project Gweihir</title>
       </Head>
+
+      <NavBar />
       {/* <Hexagon> */}
       <HomePage />
       {/* </Hexagon> */}
