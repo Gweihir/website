@@ -9,16 +9,17 @@ import neonBar from "../public/Images/neon_bar.png"
 import stripedPolygon from "../public/Images/bg_striped_polygon.png"
 import fuchsiaBlob from "../public/Images/fuchsia_blob.png"
 import fuchsiaBlobTwo from "../public/Images/fuchsia_blob_two.png"
+import peachBlob from "../public/Images/peach_blob.png"
 type Props = {}
 
 export default function HomePage(props: Props) {
   return (
     <div className='bg-gray-900 min-h-screen flex flex-col'>
       <Image
-        width={900}
-        src={fuchsiaBlobTwo}
+        width={840}
+        src={peachBlob}
         alt='Image'
-        className='invisible lg:visible mt-16 mb-4 sm:mr-8 lg:mr-2 absolute top-0 right-0 opacity-60 animate-[pulse_5s_ease-in-out_1]'
+        className='invisible lg:visible mt-20 mb-4 sm:mr-8 lg:mr-10 absolute top-0 right-0 opacity-100 animate-[pulse_5s_ease-in-out_1]'
       />
       <Image
         width={500}
