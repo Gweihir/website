@@ -9,6 +9,7 @@ const NavBar = () => {
       <div className='container mx-auto px-5 py-4 flex items-center justify-between text-white'>
         <Link href='/' className='container flex items-center justify-left max-w-max'>
           <Image
+            className='hover:animate-pulse'
             src={Logo}
             alt='Project Gweihir Logo: The silhouette of a bird within a thick blue hexagon.'
             width={48}

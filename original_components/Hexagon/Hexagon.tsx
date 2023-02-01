@@ -6,7 +6,7 @@ interface HexagonProps {
 }
 
 const Hexagon: React.FC<HexagonProps> = ({ children }) => (
-  <div className='relative w-auto h-auto mr-auto pr-40'>
+  <div className='relative w-64 h-164 m-auto'>
     <div className={`w-full h-full bg-gray-900 bg-cover bg-center ${styles.hexagon} rounded-full`}>
       {children}
     </div>
