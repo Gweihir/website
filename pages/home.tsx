@@ -10,22 +10,23 @@ import stripedPolygon from "../public/Images/bg_striped_polygon.png"
 import fuchsiaBlob from "../public/Images/fuchsia_blob.png"
 import fuchsiaBlobTwo from "../public/Images/fuchsia_blob_two.png"
 import peachBlob from "../public/Images/peach_blob.png"
+import epicContent from "../public/Images/epic_content.png"
 type Props = {}
 
 export default function HomePage(props: Props) {
   return (
     <div className='bg-gray-900 min-h-screen flex flex-col'>
-      <Image
+      {/* <Image
         width={840}
         src={peachBlob}
         alt='Image'
-        className='invisible lg:visible mt-20 mb-4 sm:mr-8 lg:mr-10 absolute top-0 right-0 opacity-100 animate-[pulse_5s_ease-in-out_1]'
-      />
+        className='invisible lg:visible mt-20 mb-4 mr-8 absolute top-0 right-0 opacity-90 animate-[pulse_4s_ease-in-out_2]'
+      /> */}
       <Image
         width={500}
-        src={blurGem}
+        src={epicContent}
         alt='Image'
-        className='invisible lg:visible mb-4 sm:mr-8 lg:mr-52 mt-56 absolute top-0 right-0 opacity-80 animate-[spin_25s_linear_infinite] hover:animate-spin'
+        className='invisible lg:visible mb-4 lg:mr-52 mt-64 absolute top-0 right-0 opacity-100 animate-[spin_8s_linear_1] hover:animate-spin'
       />
       <Image
         width={1100}

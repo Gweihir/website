@@ -7,7 +7,10 @@ const NavBar = () => {
   return (
     <nav className='bg-gray-800 z-50'>
       <div className='container mx-auto px-5 py-4 flex items-center justify-between text-white'>
-        <Link href='/' className='container flex items-center justify-left max-w-max'>
+        <Link
+          href='/'
+          className='hover:text-accent container flex items-center justify-left max-w-max'
+        >
           <Image
             className='hover:animate-pulse'
             src={Logo}
@@ -18,22 +21,22 @@ const NavBar = () => {
           <div className='text-lg font-medium pl-3'>Gweihir</div>
         </Link>
         <div className='hidden md:block items-center justify-right max-w-max sm:visible'>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/technologies'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/technologies'>
             Technologies
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/ourusers'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/ourusers'>
             Our Users
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/documentation'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/documentation'>
             Documentation
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/faq'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/faq'>
             FAQ
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/team'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/team'>
             Team
           </Link>
-          <Link className='lg:ml-10 md:ml-5 hover:text-gray-500' href='/contact'>
+          <Link className='lg:ml-10 md:ml-5 hover:text-accent' href='/contact'>
             Contact
           </Link>
         </div>

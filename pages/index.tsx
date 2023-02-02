@@ -15,11 +15,8 @@ export default function Home() {
       <Head>
         <title>Project Gweihir</title>
       </Head>
-
       <NavBar />
-      {/* <Hexagon> */}
       <HomePage />
-      {/* </Hexagon> */}
       {/* <Technologies /> */}
     </>
   )
