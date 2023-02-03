@@ -6,6 +6,7 @@ import Technologies from "./technologies"
 import BackgroundHome from "../original_components/Background/BackgroundHome"
 import Hexagon from "@/original_components/Hexagon/Hexagon"
 import NavBar from "@/original_components/NavBar"
+import epicContent from "../public/Images/epic_content.png"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Head>
         <title>Project Gweihir</title>
+        <meta property='og:image' content='/images/epic_content.png'></meta>
       </Head>
       <NavBar />
       <HomePage />
