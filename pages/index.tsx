@@ -4,6 +4,8 @@ import HomePage from "./home"
 import Technologies from "./technologies"
 import NavBar from "@/original_components/NavBar"
 
+const fbAppId = process.env.FB_APP_ID
+
 const inter = Inter({ subsets: ["latin"] })
 
 // TODO: Update all of the below meta info with correct URL before we launch on correct URL
@@ -13,6 +15,8 @@ export default function Home() {
     <>
       <Head>
         <title>Project Gweihir</title>
+        <meta property='og:type' content='website' />
+        <meta property='fb:app_id' content={fbAppId} />
         <meta property='og:title' content='Project Gweihir, Expanding What is Possible' />
         <meta
           property='og:image'

@@ -1,9 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document"
 
+const fbAppId = process.env.FB_APP_ID
+
 export default function Document() {
   return (
     <Html lang='en'>
       <Head>
+        <meta property='og:type' content='website' />
+        <meta property='fb:app_id' content={fbAppId} />
         <meta property='og:title' content='Project Gweihir, Expanding What is Possible' />
         <meta
           property='og:image'
