@@ -26,7 +26,7 @@ export default function HomePage(props: Props) {
         width={500}
         src={epicContent}
         alt='Image'
-        className='invisible lg:visible mb-4 lg:mr-52 mt-64 absolute top-0 right-0 opacity-100 animate-[spin_8s_linear_1] hover:animate-spin'
+        className='invisible lg:visible mb-4 lg:mr-52 mt-56 absolute top-0 right-0 opacity-100 animate-[spin_8s_linear_1] hover:animate-spin'
       />
       <Image
         width={1100}
