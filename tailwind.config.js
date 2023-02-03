@@ -30,6 +30,28 @@ module.exports = {
       thirdinary: "#F4BBA2",
       accent: "#F9CDB5",
     },
+    keyframes: {
+      fade_in: {
+        "0%": {
+          opacity: "0",
+        },
+        "100%": {
+          opacity: "1",
+        },
+      },
+      pulse: {
+        "0%, 100%": {
+          opacity: "1",
+        },
+        "50%": {
+          opacity: ".5",
+        },
+      },
+    },
+    animation: {
+      fade_in: "fade_in 2s ease-out",
+      pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+    },
   },
   plugins: [],
 }
