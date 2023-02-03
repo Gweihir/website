@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Head>
         <title>Project Gweihir</title>
-        <meta property='og:image' content='/images/epic_content.png'></meta>
+        <meta property='og:image' content='../public/Images/epic_content.png'></meta>
       </Head>
       <NavBar />
       <HomePage />
