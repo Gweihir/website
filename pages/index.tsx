@@ -9,6 +9,7 @@ const fbAppId = process.env.FB_APP_ID
 const inter = Inter({ subsets: ["latin"] })
 
 // TODO: Update all of the below meta info with correct URL before we launch on correct URL
+// TODO: Add LinkedIn Author and Publish Date
 
 export default function Home() {
   return (
