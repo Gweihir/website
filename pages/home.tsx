@@ -20,7 +20,7 @@ export default function HomePage(props: Props) {
         width={840}
         src={peachBlob}
         alt='Image'
-        className='invisible lg:visible mt-20 mb-4 mr-8 absolute top-0 right-0 opacity-90 animate-[pulse_4s_ease-in-out_2]'
+        className='invisible lg:visible mt-20 mb-4 mr-8 absolute top-0 right-0 opacity-80 animate-fade_in'
       /> */}
       <Image
         width={500}
