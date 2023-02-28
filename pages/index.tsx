@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <HomePage />
-      {/* <Technologies /> */}
+      <Technologies />
     </>
   )
 }
