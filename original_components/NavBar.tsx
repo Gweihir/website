@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Logo from "../public/Images/logo_2_Layer.png"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { Menu } from "@headlessui/react"
+import { Menu, Transition } from "@headlessui/react"
 
 const links = [
   { href: "/technologies", label: "Technologies" },
@@ -18,26 +18,40 @@ const links = [
 const HamburgerMenu = () => {
   return (
     <Menu>
-      <Menu.Button className={"bg-slate-200 w-6 h-6"}>More</Menu.Button>
-      <Menu.Items>
-        <Menu.Item>
-          {({ active }) => (
-            <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
-              Account settings
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
-              Documentation
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item disabled>
-          <span className='opacity-75'>Invite a friend (coming soon!)</span>
-        </Menu.Item>
-      </Menu.Items>
+      <Menu.Button
+        className={
+          "flex items-center justify-center w-10 h-10 border-2 cursor-pointer hover:text-accent hover:border-accent border-primary m-2 px-2 py-2 text-primary rounded-full"
+        }
+        as={FaBars}
+      ></Menu.Button>
+      <Transition
+        enter='transition duration-100 ease-out'
+        enterFrom='transform scale-95 opacity-0'
+        enterTo='transform scale-100 opacity-100'
+        leave='transition duration-75 ease-out'
+        leaveFrom='transform scale-100 opacity-100'
+        leaveTo='transform scale-95 opacity-0'
+      >
+        <Menu.Items>
+          <Menu.Item>
+            {({ active }) => (
+              <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
+                Account settings
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
+                Documentation
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item disabled>
+            <span className='opacity-75'>Invite a friend (coming soon!)</span>
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
     </Menu>
   )
 }
@@ -57,11 +71,10 @@ const DesktopNavbar = () => {
 const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false)
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 1024)
-  }
-
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
     window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener("resize", handleResize)
@@ -69,7 +82,7 @@ const NavBar = () => {
   }, [])
 
   return (
-    <nav className='bg-slate-700'>
+    <nav className='bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
       <div className='mr-auto px-5 py-4 flex items-center text-white'>
         <div className='lg:ml-2 xl:ml-6 md:ml-0'>
           <Link
