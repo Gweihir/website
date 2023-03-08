@@ -11,7 +11,9 @@ const inter = Inter({ subsets: ["latin"] })
 // TODO: Update all of the below meta info with correct URL before we launch on correct URL
 // TODO: Add LinkedIn Author and Publish Date
 
-export default function Home() {
+interface HomeProps {}
+
+export default function Home({}: HomeProps): JSX.Element {
   return (
     <>
       <Head>
@@ -41,9 +43,10 @@ export default function Home() {
           content='https://website-one-delta-18.vercel.app/Images/epic_thumbnail.png'
         />
       </Head>
-      <NavBar />
-      <HomePage />
-      <Technologies />
+      <NavBar>
+        <HomePage />
+        <Technologies />
+      </NavBar>
     </>
   )
 }

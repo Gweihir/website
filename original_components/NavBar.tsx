@@ -7,20 +7,22 @@ import { Menu, Transition } from "@headlessui/react"
 
 const links = [
   { href: "/technologies", label: "Technologies" },
-  { href: "/ourusers", label: "Our Users" },
+  { href: "/ourusers", label: "Users" },
   { href: "/documentation", label: "Documentation" },
   { href: "/roadmap", label: "Road Map" },
   { href: "/faq", label: "FAQ" },
   { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ]
-
+{
+  ;("ml-auto lg:block items-center justify-right max-w-max lg:mr-4 xl:mr-8")
+}
 const HamburgerMenu = () => {
   return (
     <Menu>
       <Menu.Button
         className={
-          "flex items-center justify-center w-10 h-10 border-2 cursor-pointer hover:text-accent hover:border-accent border-primary m-2 px-2 py-2 text-primary rounded-full"
+          "fixed right-6 w-10 h-10 border-2 cursor-pointer hover:text-accent hover:border-accent border-slate-400 px-2 py-2 text-secondary rounded-full z-50"
         }
         as={FaBars}
       ></Menu.Button>
@@ -32,10 +34,10 @@ const HamburgerMenu = () => {
         leaveFrom='transform scale-100 opacity-100'
         leaveTo='transform scale-95 opacity-0'
       >
-        <Menu.Items>
+        <Menu.Items className={"absolute top-16 left-24 mt-4 flex-col bg-slate-500"}>
           <Menu.Item>
             {({ active }) => (
-              <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
+              <a className={`w-full ${active && "bg-blue-500"}`} href='/account-settings'>
                 Account settings
               </a>
             )}
@@ -58,7 +60,7 @@ const HamburgerMenu = () => {
 
 const DesktopNavbar = () => {
   return (
-    <div className='hidden ml-auto lg:block items-center justify-right max-w-max lg:mr-4 xl:mr-8'>
+    <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
       {links.map(({ href, label }) => (
         <Link className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
           {label}
@@ -67,13 +69,19 @@ const DesktopNavbar = () => {
     </div>
   )
 }
-
-const NavBar = () => {
+interface NavBarProps {
+  children: React.ReactNode
+}
+export default function NavBar({ children }: NavBarProps): JSX.Element {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
+
+  useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024)
+      setIsMobile(window.innerWidth < 768)
     }
     window.addEventListener("resize", handleResize)
     return () => {
@@ -99,9 +107,9 @@ const NavBar = () => {
             <div className='text-lg font-medium pl-3'>Gweihir</div>
           </Link>
         </div>
-        {isMobile ? <HamburgerMenu /> : <DesktopNavbar />}
+        {!isMobile ? <DesktopNavbar /> : <HamburgerMenu />}
       </div>
+      <div>{children}</div>
     </nav>
   )
 }
-export default NavBar

@@ -17,6 +17,17 @@ module.exports = {
       },
       minHeight: {
         screen_90: "90vh",
+        screen_80: "80vh",
+        screen_70: "70vh",
+        screen_75: "75vh",
+        screen_60: "60vh",
+        screen_65: "65vh",
+        screen_50: "50vh",
+        screen_40: "40vh",
+        screen_39: "39vh",
+        screen_30: "30vh",
+        screen_20: "20vh",
+        screen_10: "10vh",
       },
       colors: {
         transparent: "transparent",
@@ -59,6 +70,10 @@ module.exports = {
       fade_in: "fade_in 2s ease-out",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
     },
+    lineClamp: {
+      10: "10",
+      12: "12",
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 }

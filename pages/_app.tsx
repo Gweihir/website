@@ -1,5 +1,3 @@
-import Footer from "@/original_components/Footer"
-import NavBar from "@/original_components/NavBar"
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 import { Montserrat } from "@next/font/google"

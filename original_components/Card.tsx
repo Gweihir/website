@@ -25,11 +25,11 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`${borderColor} ${backgroundColor} ${width} ${height} flex flex-col items-left justify-center p-6 rounded-md border-2`}
+      className={`${borderColor} ${backgroundColor} ${width} ${height} w-full flex flex-wrap items-left justify-evenly xl:m-6 lg:m-4 m-2 p-6 rounded-md border-2`}
     >
       <div className='mb-4'>{icon}</div>
       <h1 className={`${titleTextColor} text-xl font-bold text-left pb-3`}>{title}</h1>
-      <p className={`${bodyTextColor} text-left`}>{body}</p>
+      <p className={`${bodyTextColor} text-left line-clamp-10`}>{body}</p>
     </div>
   )
 }
