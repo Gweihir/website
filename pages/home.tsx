@@ -1,7 +1,6 @@
-import Button from "@/original_components/Button"
-import Hexagon from "@/original_components/Hexagon/Hexagon"
-import Image from "next/image"
 import React from "react"
+import Button from "@/original_components/Button"
+import Image from "next/image"
 import lightStripedPolygon from "../public/Images/bg_striped_polygon_lighter.png"
 import epicContent from "../public/Images/epic_content.png"
 
@@ -47,10 +46,10 @@ export default function HomePage(props: Props) {
             />
             <Button
               onClick={() => {
-                console.log("hit")
+                window.open("https://github.com/Gweihir/website", "_blank")
               }}
               buttonText={"Our GitHub"}
-              className={"mx-2"}
+              className={"mx-2 target_blank"}
             />
           </div>
         </section>

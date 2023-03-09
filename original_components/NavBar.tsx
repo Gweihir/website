@@ -6,13 +6,13 @@ import { FaBars, FaTimes } from "react-icons/fa"
 import { Menu, Transition } from "@headlessui/react"
 
 const links = [
-  { href: "/technologies", label: "Technologies" },
-  { href: "/ourusers", label: "Users" },
-  { href: "/documentation", label: "Documentation" },
-  { href: "/roadmap", label: "Road Map" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/team", label: "Team" },
-  { href: "/contact", label: "Contact" },
+  { href: "#technologies", label: "Technologies" },
+  { href: "#users", label: "Users" },
+  { href: "#documentation", label: "Documentation" },
+  { href: "#roadMap", label: "Road Map" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#team", label: "Team" },
+  { href: "#contact", label: "Contact" },
 ]
 {
   ;("ml-auto lg:block items-center justify-right max-w-max lg:mr-4 xl:mr-8")
@@ -150,9 +150,9 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
         {!isMobile ? (
           <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
             {links.map(({ href, label }) => (
-              <Link className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
+              <a className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
                 {label}
-              </Link>
+              </a>
             ))}
           </div>
         ) : (
