@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react"
 
-import Card from "@/original_components/Card"
 import Image from "next/image"
 import Overview from "../public/Images/gweihir_overview_transparency.png"
-import OverviewMobile from "../public/Images/mobile_gweihir_overview_transparency.png"
+
+const TechCard = () => {
+  return (
+    <div className=''>
+      <div className=''></div>
+    </div>
+  )
+}
 
 type Props = {}
 
@@ -11,7 +17,7 @@ export default function Technologies(props: Props) {
   return (
     <div className='xl:bg-slate-700 bg-slate-800 flex justify-center'>
       <main>
-        <div className='xl:bg-slate-800 bg-slate-700 p-3 md:p-6 lg:p-10 md:mt-14 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
+        <div className='xl:bg-slate-800 bg-slate-700 p-3 md:p-6 lg:p-10 md:mt-14 mb-10 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
           {/* <div className='flex flex-row justify-between md:pl-10 md:pr-10 text-accent md:text-xl font-bold'>
             <div className=''>Gweihir!!</div>
             <div className=''>Chainlink</div>

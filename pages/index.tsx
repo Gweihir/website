@@ -1,3 +1,4 @@
+import React from "react"
 import Head from "next/head"
 import { Inter } from "@next/font/google"
 import HomePage from "./home"
@@ -7,6 +8,19 @@ import NavBar from "@/original_components/NavBar"
 const fbAppId = process.env.FB_APP_ID
 
 const inter = Inter({ subsets: ["latin"] })
+
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <div className='min-h-screen'>
+      <NavBar className='z-50' />
+      <div>{children}</div>
+    </div>
+  )
+}
 
 // TODO: Update all of the below meta info with correct URL before we launch on correct URL
 // TODO: Add LinkedIn Author and Publish Date
@@ -43,10 +57,10 @@ export default function Home({}: HomeProps): JSX.Element {
           content='https://website-one-delta-18.vercel.app/Images/epic_thumbnail.png'
         />
       </Head>
-      <NavBar>
+      <Layout>
         <HomePage />
         <Technologies />
-      </NavBar>
+      </Layout>
     </>
   )
 }

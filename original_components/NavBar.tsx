@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "../public/Images/logo_2_Layer.png"
@@ -70,10 +70,41 @@ const DesktopNavbar = () => {
   )
 }
 interface NavBarProps {
-  children: React.ReactNode
+  className?: string
 }
-export default function NavBar({ children }: NavBarProps): JSX.Element {
+export default function NavBar({ className }: NavBarProps): JSX.Element {
   const [isMobile, setIsMobile] = useState(false)
+  const navbarRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset
+    const navbar = navbarRef.current
+    if (navbar !== null) {
+      window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset
+        if (prevScrollpos > currentScrollPos) {
+          navbar.style.transform = "translateY(0)"
+        } else {
+          navbar.style.transform = "translateY(-100%)"
+        }
+        prevScrollpos = currentScrollPos
+      }
+    }
+  }, [navbarRef])
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768)
@@ -90,7 +121,11 @@ export default function NavBar({ children }: NavBarProps): JSX.Element {
   }, [])
 
   return (
-    <nav className='bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
+    <nav
+      className={`bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)] fixed top-0 w-full transition duration-500 ease-in-out transform -translate-y-full ${className}`}
+      id={"navbar"}
+      ref={navbarRef}
+    >
       <div className='mr-auto px-5 py-4 flex items-center text-white'>
         <div className='lg:ml-2 xl:ml-6 md:ml-0'>
           <Link
@@ -107,9 +142,18 @@ export default function NavBar({ children }: NavBarProps): JSX.Element {
             <div className='text-lg font-medium pl-3'>Gweihir</div>
           </Link>
         </div>
-        {!isMobile ? <DesktopNavbar /> : <HamburgerMenu />}
+        {!isMobile ? (
+          <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
+            {links.map(({ href, label }) => (
+              <Link className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
+                {label}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <HamburgerMenu />
+        )}
       </div>
-      <div>{children}</div>
     </nav>
   )
 }
