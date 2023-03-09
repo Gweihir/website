@@ -74,6 +74,7 @@ interface NavBarProps {
 }
 export default function NavBar({ className }: NavBarProps): JSX.Element {
   const [isMobile, setIsMobile] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const navbarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -97,8 +98,10 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
       window.onscroll = function () {
         let currentScrollPos = window.pageYOffset
         if (prevScrollpos > currentScrollPos) {
+          setIsVisible(true)
           navbar.style.transform = "translateY(0)"
         } else {
+          setIsVisible(false)
           navbar.style.transform = "translateY(-100%)"
         }
         prevScrollpos = currentScrollPos
@@ -122,7 +125,9 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
 
   return (
     <nav
-      className={`bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)] fixed top-0 w-full transition duration-500 ease-in-out transform -translate-y-full ${className}`}
+      className={`bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)] fixed top-0 w-full transition duration-500 ease-in-out transform ${
+        isVisible ? "" : "-translate-y-full"
+      } ${className}`}
       id={"navbar"}
       ref={navbarRef}
     >
