@@ -19,56 +19,46 @@ const links = [
 }
 const HamburgerMenu = () => {
   return (
-    <Menu>
-      <Menu.Button
-        className={
-          "fixed right-6 w-10 h-10 border-2 cursor-pointer hover:text-accent hover:border-accent border-slate-400 px-2 py-2 text-secondary rounded-full z-50"
-        }
-        as={FaBars}
-      ></Menu.Button>
-      <Transition
-        enter='transition duration-100 ease-out'
-        enterFrom='transform scale-95 opacity-0'
-        enterTo='transform scale-100 opacity-100'
-        leave='transition duration-75 ease-out'
-        leaveFrom='transform scale-100 opacity-100'
-        leaveTo='transform scale-95 opacity-0'
-      >
-        <Menu.Items className={"absolute top-16 left-24 mt-4 flex-col bg-slate-500"}>
-          <Menu.Item>
-            {({ active }) => (
-              <a className={`w-full ${active && "bg-blue-500"}`} href='/account-settings'>
-                Account settings
-              </a>
-            )}
-          </Menu.Item>
-          <Menu.Item>
-            {({ active }) => (
-              <a className={`${active && "bg-blue-500"}`} href='/account-settings'>
-                Documentation
-              </a>
-            )}
-          </Menu.Item>
-          <Menu.Item disabled>
-            <span className='opacity-75'>Invite a friend (coming soon!)</span>
-          </Menu.Item>
-        </Menu.Items>
-      </Transition>
-    </Menu>
-  )
-}
-
-const DesktopNavbar = () => {
-  return (
-    <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
-      {links.map(({ href, label }) => (
-        <Link className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
-          {label}
-        </Link>
-      ))}
+    <div className='relative right-0'>
+      <Menu>
+        <div className='flex items-center'>
+          <Menu.Button
+            className={
+              "absolute right-0 w-10 h-10 border-2 cursor-pointer hover:text-accent hover:border-accent border-slate-400 px-2 py-2 text-secondary rounded-full z-50"
+            }
+            as={FaBars}
+          ></Menu.Button>
+        </div>
+        <Transition
+          enter='transition duration-300 transform ease-out'
+          enterFrom='opacity-0 translate-y-2 scale-95'
+          enterTo='opacity-100 translate-y-0 scale-100'
+          leave='transition duration-200 transform ease-in'
+          leaveFrom='opacity-100 translate-y-0 scale-100'
+          leaveTo='opacity-0 translate-y-2 scale-95'
+        >
+          <Menu.Items className='absolute -right-12 top-10 mx-6 pl-2 pr-4 py-2 bg-slate-700 border-slate-600 border-x-2 border-b-2 rounded-sm'>
+            {links.map(({ href, label }) => (
+              <Menu.Item key={href}>
+                {({ active }) => (
+                  <a
+                    className={`block w-full py-2 px-4 text-sm lg:text-base ${
+                      active ? "text-accent bg-slate-800" : ""
+                    }`}
+                    href={href}
+                  >
+                    {label}
+                  </a>
+                )}
+              </Menu.Item>
+            ))}
+          </Menu.Items>
+        </Transition>
+      </Menu>
     </div>
   )
 }
+
 interface NavBarProps {
   className?: string
 }
@@ -131,8 +121,8 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
       id={"navbar"}
       ref={navbarRef}
     >
-      <div className='mr-auto px-5 py-4 flex items-center text-white'>
-        <div className='lg:ml-2 xl:ml-6 md:ml-0'>
+      <div className='px-5 py-4 flex items-center justify-between text-white'>
+        <div className='flex items-center'>
           <Link
             href='/'
             className='hover:text-accent container flex items-center justify-left max-w-max'
