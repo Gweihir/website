@@ -10,16 +10,16 @@ export default function HomePage(props: Props) {
   return (
     <main className='bg-slate-800 flex flex-col xl:min-h-screen_88 lg:min-h-screen_80 md:min-h-screen_70 sm:min-h-screen_40 min-h-screen_10 mt-20'>
       <Image
-        width={500}
-        src={epicContent}
-        alt='Image'
-        className='invisible lg:visible mb-4 lg:mr-52 mt-60 absolute top-0 right-0 opacity-100 animate-fade_in'
-      />
-      <Image
         width={1100}
         src={lightStripedPolygon}
         alt='Image'
         className='invisible mt-20 md:visible mb-4 mr-52 absolute top-24 left-0 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'
+      />
+      <Image
+        width={500}
+        src={epicContent}
+        alt='Image'
+        className='invisible md:visible mb-4 md:w-1/6 lg:w-1/3 xl:w-auto xl:mr-1/4 lg:mr-6 md:mr-48 mt-60 absolute lg:top-10 md:top-56 top-10 xl:top-0 right-0 opacity-100 animate-fade_in'
       />
       <div className='flex-1 py-8 px-6 relative'>
         <section
