@@ -37,7 +37,7 @@ const HamburgerMenu = () => {
           leaveFrom='opacity-100 translate-y-0 scale-100'
           leaveTo='opacity-0 translate-y-2 scale-95'
         >
-          <Menu.Items className='absolute -right-12 top-10 mx-6 pl-2 pr-4 py-2 bg-slate-700 border-slate-600 border-x-2 border-b-2 rounded-sm'>
+          <Menu.Items className='absolute outline-none -right-12 top-10 mx-6 pl-2 pr-4 py-2 bg-slate-700 border-slate-600 border-x-2 border-b-2'>
             {links.map(({ href, label }) => (
               <Menu.Item key={href}>
                 {({ active }) => (
