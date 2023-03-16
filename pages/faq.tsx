@@ -2,7 +2,7 @@ import React from "react"
 
 const qAArray = [
   {
-    question: `What are the advantages of using Chainlink to bridge Kusama to Ethereum?`,
+    question: `Why use Chainlink to bridge Kusama to Ethereum?`,
     answer: (
       <div>
         <li>
@@ -37,7 +37,7 @@ const qAArray = [
     ),
   },
   {
-    question: `What are the advantages of using Kusama?`,
+    question: `What does Kusama have to offer?`,
     answer: (
       <div>
         <li>
@@ -78,7 +78,7 @@ const qAArray = [
     ),
   },
   {
-    question: `What could developers conceivably create using Gweihir?`,
+    question: `What are Gweihir's possible applications?`,
     answer: (
       <div>
         <li>
