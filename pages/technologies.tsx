@@ -6,7 +6,7 @@ import Bird from "/public/Images/bird.png"
 import Link from "/public/Images/Chainlink_MJ_Icon_For_Web.png"
 import Eth from "/public/Images/193-1936896_bitseven-ethereum-balance-blue-ethereum-logo.png"
 
-const techObject = [
+const techArray = [
   {
     title: `Gweihir`,
     body: `Kusama is a "relay chain" (a.k.a. layer 0) built using Substrate and secured by a proof-of-stake consensus protocol. In other words, Kusama provides network security and cross-chain infrastructure for all blockchains that are connected to its "parachain" slots. This configuration allows developers to deploy highly customizable blockchain technologies without needing to bootstrap their own security. As a result, dozens of blockchains have deployed on Kusama providing the ecosystem with defi, EVM compatibility, privacy, credentialing, decentralized storage, social media, metaverse and NFT technologies, and more!`,
@@ -55,7 +55,7 @@ const TechCard: React.FC<TechCardProps> = ({
         <h1 className={`${titleTextColor} text-left text-3xl md:text-xl lg:text-2xl pl-6 pt-2`}>
           {title}
         </h1>
-        <p className={`${bodyTextColor} text-left line-clamp-10`}>{body}</p>
+        <p className={`${bodyTextColor} text-left sm:line-clamp-12`}>{body}</p>
       </div>
     </div>
   )
@@ -65,7 +65,7 @@ type Props = {}
 
 export default function Technologies(props: Props) {
   return (
-    <main>
+    <main className=''>
       <div className='xl:bg-slate-700 bg-slate-800 flex justify-center'>
         <div id='technologies' className='flex flex-wrap justify-center'>
           <div className='xl:bg-slate-800 bg-slate-700 p-3 md:p-6 lg:p-10 md:mt-14 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
@@ -79,7 +79,7 @@ export default function Technologies(props: Props) {
         </div>
       </div>
       <div className='xl:bg-slate-700 bg-slate-800 flex justify-center flex-col md:flex-row'>
-        {techObject.map((tech, index) => (
+        {techArray.map((tech, index) => (
           <TechCard
             key={index}
             title={tech.title}
