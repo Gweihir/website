@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Image, { StaticImageData } from "next/image"
 import Overview from "../public/Images/gweihir_overview_transparency.png"
@@ -9,7 +9,7 @@ import Eth from "/public/Images/193-1936896_bitseven-ethereum-balance-blue-ether
 const techArray = [
   {
     title: `Gweihir`,
-    body: `Kusama is a "relay chain" (a.k.a. layer 0) built using Substrate and secured by a proof-of-stake consensus protocol. In other words, Kusama provides network security and cross-chain infrastructure for all blockchains that are connected to its "parachain" slots. This configuration allows developers to deploy highly customizable blockchain technologies without needing to bootstrap their own security. As a result, dozens of blockchains have deployed on Kusama providing the ecosystem with defi, EVM compatibility, privacy, credentialing, decentralized storage, social media, metaverse and NFT technologies, and more!`,
+    body: `Gweihir is a Chainlink node that is configured to bridge the Kusama and Ethereum networks. This means that it enables developers to connect smart contracts on the Kusama network with data and resources on the Ethereum network, and vice versa. Gweihir uses Chainlink's decentralized oracle network to securely and reliably transmit data between the two networks. In this way, Gweihir provides developers with a powerful tool for creating cross-chain applications that can take advantage of the unique features and capabilities of both Kusama and Ethereum.`,
     littleImage: Bird,
   },
   {
@@ -46,6 +46,12 @@ const TechCard: React.FC<TechCardProps> = ({
   width,
   height,
 }) => {
+  const [readMore, setReadMore] = useState(false)
+
+  const handleReadMore = () => {
+    setReadMore(!readMore)
+  }
+
   return (
     <div className='relative justify-center top-4 md:-top-10 lg:-top-24'>
       <div
@@ -55,7 +61,12 @@ const TechCard: React.FC<TechCardProps> = ({
         <h1 className={`${titleTextColor} text-left text-3xl md:text-xl lg:text-2xl pl-6 pt-2`}>
           {title}
         </h1>
-        <p className={`${bodyTextColor} text-left sm:line-clamp-12`}>{body}</p>
+        <div className=''>
+          <p className={`${bodyTextColor} text-left ${!readMore && "sm:line-clamp-12"}`}>{body}</p>
+          <button className='text-accent invisible md:visible' onClick={handleReadMore}>
+            {!readMore ? "-read more-" : "-close-"}
+          </button>
+        </div>
       </div>
     </div>
   )
@@ -67,7 +78,7 @@ export default function Technologies(props: Props) {
   return (
     <main className=''>
       <div className='xl:bg-slate-700 bg-slate-800 flex justify-center'>
-        <div id='technologies' className='flex flex-wrap justify-center'>
+        <div id='technologies' className='flex flex-wrap justify-center '>
           <div className='xl:bg-slate-800 bg-slate-700 p-3 md:p-6 lg:p-10 md:mt-14 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
             <Image
               src={Overview}
