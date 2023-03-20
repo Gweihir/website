@@ -138,7 +138,7 @@ export default function Faq(props: Props) {
   return (
     <main>
       <div id='faq' className='bg-slate-800 flex flex-col justify-center h-auto pb-10'>
-        <h1 className='font-lg w-full text-accent font-bold text-center mt-6 text-3xl'>FAQ</h1>
+        <h1 className='font-lg w-full text-accent font-semibold text-center mt-6 text-3xl'>FAQ</h1>
         <div id='technologies' className='justify-center'>
           <div className='bg-slate-800 justify-center'>
             {qAArray.map((qa, index) => (

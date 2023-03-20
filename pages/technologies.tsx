@@ -78,14 +78,19 @@ export default function Technologies(props: Props) {
   return (
     <main className=''>
       <div className='xl:bg-slate-700 bg-slate-800 flex justify-center'>
-        <div id='technologies' className='flex flex-wrap justify-center '>
-          <div className='xl:bg-slate-800 bg-slate-700 p-3 md:p-6 lg:p-10 md:mt-14 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)]'>
-            <Image
-              src={Overview}
-              width={1200}
-              alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-              className='md:pb-10'
-            />
+        <div>
+          <div id='technologies' className='flex flex-wrap justify-center '>
+            <div className='bg-slate-800 p-3 md:p-6 lg:p-10 md:mt-8 '>
+              <h1 className='font-lg w-full text-accent font-semibold text-center mb-6 text-3xl'>
+                Technologies
+              </h1>
+              <Image
+                src={Overview}
+                width={1200}
+                alt='Image of Gweihir Interacting with Ethereum via Chainlink'
+                className='md:pb-10'
+              />
+            </div>
           </div>{" "}
         </div>
       </div>
