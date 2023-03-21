@@ -61,9 +61,9 @@ export default function UsersPage(props: Props) {
                 providing reliable and secure access to real-time data for smart contract
                 developers. This increases interoperability between the two ecosystems, enhances the
                 security and accuracy of smart contracts, and creates new revenue streams for node
-                operators. Gweihir's services can also benefit founders launching parachains on
+                operators. Gweihir&apos;s services can also benefit founders launching parachains on
                 Kusama by allowing them to associate their substrate accounts with Ethereum accounts
-                and offer more robust rewards to their community. Ultimately, Gweihir's data
+                and offer more robust rewards to their community. Ultimately, Gweihir&apos;s data
                 bridging services can drive innovation, collaboration, and growth in the Kusama and
                 Ethereum ecosystems.
               </div>
@@ -126,9 +126,9 @@ export default function UsersPage(props: Props) {
                 existing infrastructure, thanks to its use of Chainlink nodes. This can make it an
                 attractive option for node operators who are looking for new opportunities but do
                 not want to invest significant time and resources in learning new technologies or
-                systems. Finally, Gweihir's emphasis on security and end-to-end encryption can help
-                node operators build trust with their clients and ensure that the data they provide
-                is reliable and accurate. This can help them establish a reputation as a
+                systems. Finally, Gweihir&apos;s emphasis on security and end-to-end encryption can
+                help node operators build trust with their clients and ensure that the data they
+                provide is reliable and accurate. This can help them establish a reputation as a
                 high-quality provider of data bridging services and attract more clients over time.
               </p>
             </div>
