@@ -8,8 +8,8 @@ import Eth from "/public/Images/193-1936896_bitseven-ethereum-balance-blue-ether
 
 const techArray = [
   {
-    title: `Gweihir`,
-    body: `Gweihir is a Chainlink node that is configured to bridge the Kusama and Ethereum networks. This means that it enables developers to connect smart contracts on the Kusama network with data and resources on the Ethereum network, and vice versa. Gweihir uses Chainlink's decentralized oracle network to securely and reliably transmit data between the two networks. In this way, Gweihir provides developers with a powerful tool for creating cross-chain applications that can take advantage of the unique features and capabilities of both Kusama and Ethereum.`,
+    title: `Kusama`,
+    body: `Kusama is a decentralized blockchain network that offers a permissionless environment for developers to create and launch decentralized applications and smart contracts. It operates on a proof-of-stake consensus mechanism and features a flexible upgrade process. Kusama is designed to be a community-driven network, with users having a say in its governance and decision-making. Its architecture is similar to Polkadot, but Kusama has its own unique features, such as flexibility and a community-driven approach that makes it an intriguing option for building decentralized applications.`,
     littleImage: Bird,
   },
   {
@@ -87,7 +87,7 @@ export default function Technologies(props: Props) {
               <Image
                 src={Overview}
                 width={1200}
-                alt='Image of Gweihir Interacting with Ethereum via Chainlink'
+                alt='Image of Kusama Interacting with Ethereum via Chainlink'
                 className='md:pb-10'
               />
             </div>
