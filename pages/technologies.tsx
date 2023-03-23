@@ -76,10 +76,10 @@ type Props = {}
 
 export default function Technologies(props: Props) {
   return (
-    <main className=''>
+    <section id='technologies'>
       <div className='xl:bg-slate-700 bg-slate-800 flex justify-center'>
         <div>
-          <div id='technologies' className='flex flex-wrap justify-center '>
+          <div className='flex flex-wrap justify-center '>
             <div className='bg-slate-800 p-3 md:p-6 lg:p-10 md:mt-8 '>
               <h1 className='font-lg w-full text-accent font-semibold text-center mb-6 text-3xl'>
                 Technologies
@@ -110,6 +110,6 @@ export default function Technologies(props: Props) {
           />
         ))}
       </div>
-    </main>
+    </section>
   )
 }

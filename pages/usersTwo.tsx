@@ -54,7 +54,7 @@ export default function UsersPageTwo(props: Props) {
           <div className='flex flex-row items-center'>
             <div className='flex flex-col items-center justify-center min-w-fit'>
               <h1
-                className='text-accent font-semibold text-lg w-full mx-auto pb-4 pt-4'
+                className='text-accent font-semibold text-lg w-full mx-auto pb-4'
                 style={{ textAlign: "center" }}
               >
                 ~ Node Operators ~
@@ -99,7 +99,7 @@ export default function UsersPageTwo(props: Props) {
             </div>
             <div className='flex flex-col items-center justify-center min-w-fit'>
               <h1
-                className='text-accent font-semibold text-lg w-full mx-auto pb-4 pt-4'
+                className='text-accent font-semibold text-lg w-full mx-auto pb-4'
                 style={{ textAlign: "center" }}
               >
                 ~ Kusama Users ~
