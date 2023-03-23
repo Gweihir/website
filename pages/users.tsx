@@ -17,7 +17,7 @@ export default function UsersPage(props: Props) {
         </h1>
         <div className='w-full flex xl:flex-row flex-col justify-items-between mt-11'>
           {/* Node Operators */}
-          <div className='flex flex-row justify-center mt-52 xl:w-1/3 text-left order-2 xl:order-1'>
+          <div className='flex flex-row justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-2 xl:order-1'>
             <div className='w-full'>
               <div className='mx-auto'>
                 <h1 className='text-accent font-semibold text-lg text-center pb-7'>
@@ -56,8 +56,8 @@ export default function UsersPage(props: Props) {
               <div className='flex flex-row justify-center text-left order-2 xl:order-1'>
                 <div className='w-full'>
                   <div className='mx-auto'>
-                    <h1 className='text-accent font-semibold text-lg text-center pb-7'>
-                      ~ Node Operators ~
+                    <h1 className='text-accent font-semibold mt-10 xl:mt-0 text-lg text-center pb-7'>
+                      ~ Kusama Users ~
                     </h1>
                     <Image
                       src={Birdie}
@@ -83,7 +83,7 @@ export default function UsersPage(props: Props) {
           </div>
 
           {/* Smart Contract Devs */}
-          <div className='flex flex-row justify-center mt-52 xl:w-1/3 text-left order-3 xl:order-3'>
+          <div className='flex flex-row justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-3 xl:order-3'>
             <div>
               <h1 className='text-accent font-semibold text-lg text-center pb-7'>
                 ~ Smart Contract Devs ~
