@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 Devs
+octocat
 parachains
 permissionless
 Polkadot

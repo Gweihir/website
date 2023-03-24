@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image"
 import Overview from "../public/Images/gweihir_overview_transparency.png"
 import Bird from "/public/Images/bird.png"
 import Link from "/public/Images/Chainlink_MJ_Icon_For_Web.png"
-import Eth from "/public/Images/193-1936896_bitseven-ethereum-balance-blue-ethereum-logo.png"
+import Eth from "/public/Images/eth.png"
 
 const techArray = [
   {
