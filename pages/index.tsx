@@ -5,9 +5,8 @@ import HomePage from "./home"
 import Technologies from "./technologies"
 import NavBar from "@/original_components/NavBar"
 import Faq from "./faq"
-import UsersPage from "./users"
-import Documentation from "./documentation"
-import UsersPageTwo from "./usersTwo"
+import UsersPage from "./clientele"
+import Resources from "./resources"
 
 const fbAppId = process.env.FB_APP_ID
 
@@ -65,9 +64,8 @@ export default function Home({}: HomeProps): JSX.Element {
         <HomePage />
         <Technologies />
         <UsersPage />
-        {/* <UsersPageTwo /> */}
-        <Documentation />
-        <Faq />
+        <Resources />
+        {/* <Faq /> */}
       </Layout>
     </>
   )

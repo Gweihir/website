@@ -4,12 +4,16 @@ type ButtonProps = {
   buttonText: string
   onClick: () => void
   className?: string
+  disabled?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({ buttonText, onClick, className = "" }) => (
+const Button: React.FC<ButtonProps> = ({ buttonText, onClick, className = "", disabled }) => (
   <button
     onClick={onClick}
-    className={`py-2 font-semibold px-4 text-sm sm:text-base rounded-lg text-black bg-primary hover:bg-accent active:bg-thirdinary ${className}`}
+    disabled={disabled}
+    className={`py-2 font-semibold cursor-pointer px-4 text-sm sm:text-base rounded-lg text-black bg-primary ${
+      disabled && "bg-gray-400"
+    } ${!disabled && "hover:bg-accent"} ${!disabled && "active:bg-thirdinary"} ${className}`}
   >
     {buttonText}
   </button>

@@ -48,28 +48,45 @@ module.exports = {
         slateEightHundred: "#1e293b",
         slateNineHundred: "#0f172a",
       },
-    },
-    keyframes: {
-      fade_in: {
-        "0%": {
-          opacity: "0",
+      keyframes: {
+        fade_in: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
         },
-        "100%": {
-          opacity: "1",
+        pulse: {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: ".5",
+          },
+        },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(-30deg)" },
+          "5%": { transform: "rotate(-30deg)" },
+        },
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(10px)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
         },
       },
-      pulse: {
-        "0%, 100%": {
-          opacity: "1",
-        },
-        "50%": {
-          opacity: ".5",
-        },
+      animation: {
+        fade_in: "fade_in 2s ease-out",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        wiggle: "wiggle 10s ease-out",
+        bounce: "bounce 1s ease-in-out 2",
       },
-    },
-    animation: {
-      fade_in: "fade_in 2s ease-out",
-      pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
     },
     lineClamp: {
       10: "10",

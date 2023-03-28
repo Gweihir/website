@@ -9,7 +9,14 @@ import Eth from "/public/Images/eth.png"
 const techArray = [
   {
     title: `Kusama`,
-    body: `Kusama is a decentralized blockchain network that offers a permissionless environment for developers to create and launch decentralized applications and smart contracts. It operates on a proof-of-stake consensus mechanism and features a flexible upgrade process. Kusama is designed to be a community-driven network, with users having a say in its governance and decision-making. Its architecture is similar to Polkadot, but Kusama has its own unique features, such as flexibility and a community-driven approach that makes it an intriguing option for building decentralized applications.`,
+    body: `Kusama is a decentralized blockchain network that offers a permissionless
+    environment for developers to create and launch sharded blockchains that share
+    Kusama&apos;s security. It operates on a proof-of-stake consensus mechanism and
+    features a flexible upgrade process via open governance. KSM token holders
+    decide the outcome of governance referenda making Kusama a community-driven
+    protocol. Its architecture is similar to Polkadot, but Kusama has faster block
+    times and its ecosystem encourages more experimental developments, making it
+    Polkadot&apos;s &quot;canary&quot; network.`,
     littleImage: Bird,
   },
   {

@@ -26,30 +26,31 @@ export default function HomePage(props: Props) {
           id='Home'
           className='mt-10 md:mt-44 sm:pr-24 ml-0 md:ml-7 lg:ml-18 xl:ml-36 lg:w-2/3 xl:w-5/12 w-full'
         >
-          <h1 className='text-white text-4xl font-medium mb-4 text-left pl-4'>
+          <h1 className='text-white text-2xl sm:text-4xl font-medium mb-4 text-left pl-4'>
             Bridge Kusama Data
             <br />
-            to the world with Gweihir
+            to Ethereum
           </h1>
 
-          <p className='text-gray-400 pl-4 text-xl'>
-            Gweihir provides you with the the ability to bridge Kusama Data to the Ethereum
-            blockchain via Chainlink nodes using a process that is secure end-to-end.
+          <p className='text-gray-400 pl-4 text:lg sm:text-xl'>
+            Gweihir provides smart contracts the ability to bridge Kusama Data to the Ethereum
+            blockchain via the Chainlink network using a secure process.
           </p>
           <div className='ml-2 mt-5'>
             <Button
               onClick={() => {
-                console.log("hit")
+                window.open("https://github.com/Gweihir", "_blank")
               }}
               buttonText={"Contact us"}
               className={"mx-2"}
             />
             <Button
               onClick={() => {
-                window.open("https://github.com/Gweihir/website", "_blank")
+                window.open("https://github.com/Gweihir", "_blank")
               }}
-              buttonText={"Our GitHub"}
+              buttonText={"Get Started"}
               className={"mx-2 target_blank"}
+              disabled={true}
             />
           </div>
         </section>

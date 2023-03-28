@@ -7,12 +7,12 @@ import { Menu, Transition } from "@headlessui/react"
 
 const links = [
   { href: "#technologies", label: "Technologies" },
-  { href: "#users", label: "Users" },
-  { href: "#documentation", label: "Documentation" },
-  { href: "#roadMap", label: "Road Map" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
+  { href: "#clientele", label: "Clientele" },
+  { href: "#resources", label: "Resources" },
+  // { href: "#roadMap", label: "Road Map" },
+  // { href: "#faq", label: "FAQ" },
+  // { href: "#team", label: "Team" },
+  { href: "https://github.com/Gweihir", label: "Contact" },
 ]
 {
   ;("ml-auto lg:block items-center justify-right max-w-max lg:mr-4 xl:mr-8")
@@ -46,6 +46,24 @@ const HamburgerMenu = () => {
                       active ? "text-accent bg-slate-800" : ""
                     }`}
                     href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {label}
+                  </a>
+                )}
+              </Menu.Item>
+            ))}
+            {links.map(({ href, label }) => (
+              <Menu.Item key={href}>
+                {({ active }) => (
+                  <a
+                    className={`block w-full py-2 px-4 text-sm lg:text-base ${
+                      active ? "text-accent bg-slate-800" : ""
+                    }`}
+                    href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {label}
                   </a>
@@ -115,7 +133,7 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
 
   return (
     <nav
-      className={`bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)] fixed top-0 w-full transition duration-500 ease-in-out transform ${
+      className={`navbar bg-slate-700 drop-shadow-[0_5px_5px_rgba(25,25,25,0.5)] fixed top-0 w-full transition duration-500 ease-in-out transform ${
         isVisible ? "" : "-translate-y-full"
       } ${className}`}
       id={"navbar"}
@@ -140,7 +158,13 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
         {!isMobile ? (
           <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
             {links.map(({ href, label }) => (
-              <a className='lg:ml-10 md:ml-5 hover:text-accent' href={href} key={href}>
+              <a
+                className='lg:ml-10 md:ml-5 hover:text-accent'
+                href={href}
+                key={href}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 {label}
               </a>
             ))}
