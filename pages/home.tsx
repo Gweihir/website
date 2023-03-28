@@ -8,7 +8,7 @@ type Props = {}
 
 export default function HomePage(props: Props) {
   return (
-    <main className='bg-slate-800 flex flex-col xl:min-h-screen_88 lg:min-h-screen_80 md:min-h-screen_70 sm:min-h-screen_40 min-h-screen_10 mt-20'>
+    <main className='bg-slate-800 flex flex-col xl:min-h-screen_88 lg:min-h-screen_80 md:min-h-screen_70 sm:min-h-screen_40 min-h-screen_10 sm:mt-20 mt-16'>
       <Image
         width={1100}
         src={lightStripedPolygon}
@@ -26,7 +26,7 @@ export default function HomePage(props: Props) {
           id='Home'
           className='mt-10 md:mt-44 sm:pr-24 ml-0 md:ml-7 lg:ml-18 xl:ml-36 lg:w-2/3 xl:w-5/12 w-full'
         >
-          <h1 className='text-white text-2xl sm:text-4xl font-medium mb-4 text-left pl-4'>
+          <h1 className='text-white text-2xl sm:text-4xl font-medium mb-4 text-left pl-4 pb-4 sm:pb-0'>
             Bridge Kusama Data
             <br />
             to Ethereum

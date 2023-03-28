@@ -12,7 +12,7 @@ export default function UsersPage(props: Props) {
   return (
     <section id='clientele' className='text-center'>
       <div className='flex flex-wrap justify-evenly pt-12 pb-20 sm:px-32'>
-        <h1 className='font-lg w-full text-accent font-semibold text-center mb-8 text-3xl'>
+        <h1 className='w-full text-accent text-center mb-8 sm:font-semibold text-2xl sm:text-3xl'>
           Our Clientele
         </h1>
         <div className='w-full flex xl:flex-row flex-col justify-items-between mt-11'>
@@ -20,14 +20,14 @@ export default function UsersPage(props: Props) {
           <div className='flex flex-row lg:mr-4 justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-2 xl:order-1'>
             <div className='w-full'>
               <div className='mx-auto'>
-                <h1 className='text-accent font-semibold text-lg text-center pb-4'>
+                <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
                   ~ Node Operators ~
                 </h1>
                 <Image
                   src={Servers}
                   height={200}
                   alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-                  className='md:pb-10 mx-auto'
+                  className='xl:pb-10 mx-auto'
                 />
               </div>
               <p className='text-white text-left mt-6 p-8 xl:mt-0 bg-slate-700 rounded-md'>
@@ -47,33 +47,35 @@ export default function UsersPage(props: Props) {
                 src={DeskGuy}
                 height={400}
                 alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-                className='md:pb-10 mx-auto'
+                className='xl:pb-10 mx-auto'
               />
 
               {/* Kusama Users */}
               <div className='flex flex-row justify-center text-left order-2 xl:order-1'>
                 <div className='w-full'>
                   <div className='mx-auto'>
-                    <h1 className='text-accent font-semibold mt-10 xl:mt-0 text-lg text-center pb-4'>
+                    <h1 className='text-accent sm:font-semibold mt-10 xl:mt-0 text-lg text-center pb-4'>
                       ~ Kusama Users ~
                     </h1>
                     <Image
                       src={Birdie}
                       height={200}
                       alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-                      className='md:pb-10 mx-auto'
+                      className='xl:pb-10 mx-auto'
                     />
                   </div>
-                  <p className='text-white text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0'>
-                    Gweihir allows Kusama users the opportunity to expand their on-chain
-                    productivity into the Ethereum ecosystem, providing limitless utility while not
-                    relying on the use of centralized infrastructure. Gweihir is particularly
-                    valuable to teams launching parachains on Kusama; it allows them to supplement
-                    crowd-loan rewards with ERC-20 tokens on the Ethereum network by associating
-                    users&apos; substrate accounts with their Ethereum accounts. This can boost
-                    participation and engagement from users, ultimately helping parachain teams
-                    achieve higher user adoption.
-                  </p>
+                  <div className='text-center'>
+                    <p className='text-white justify text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0 xl:w-full lg:w-3/4 w-full mx-auto'>
+                      Gweihir allows Kusama users the opportunity to expand their on-chain
+                      productivity into the Ethereum ecosystem, providing limitless utility while
+                      not relying on the use of centralized infrastructure. Gweihir is particularly
+                      valuable to teams launching parachains on Kusama; it allows them to supplement
+                      crowd-loan rewards with ERC-20 tokens on the Ethereum network by associating
+                      users&apos; substrate accounts with their Ethereum accounts. This can boost
+                      participation and engagement from users, ultimately helping parachain teams
+                      achieve higher user adoption.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,14 +84,14 @@ export default function UsersPage(props: Props) {
           {/* Smart Contract Devs */}
           <div className='flex flex-row lg:ml-4 justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-3 xl:order-3'>
             <div>
-              <h1 className='text-accent font-semibold text-lg text-center pb-4'>
+              <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
                 ~ Smart Contract Devs ~
               </h1>
               <Image
                 src={DigitalContract}
                 height={200}
                 alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-                className='md:pb-10 mx-auto'
+                className='xl:pb-10 mx-auto'
               />
               <p className='text-white text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0'>
                 Gweihir offers novel data-bridging services to smart contract developers. By

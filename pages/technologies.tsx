@@ -65,7 +65,9 @@ const TechCard: React.FC<TechCardProps> = ({
         className={`${borderColor} ${backgroundColor} ${width} ${height} w-full flex flex-wrap justify-start xl:m-10 lg:m-4 m-2 p-6 rounded-md border-2`}
       >
         <Image src={littleImage} width={50} height={50} alt='blob' className='pb-4' />
-        <h1 className={`${titleTextColor} text-left text-3xl md:text-xl lg:text-2xl pl-6 pt-2`}>
+        <h1
+          className={`${titleTextColor} text-left text-2xl sm:text-2xl md:text-xl lg:text-3xl pl-6 pt-2`}
+        >
           {title}
         </h1>
         <div className=''>
@@ -88,7 +90,7 @@ export default function Technologies(props: Props) {
         <div>
           <div className='flex flex-wrap justify-center '>
             <div className='bg-slate-800 p-3 md:p-6 lg:p-10 md:mt-8 '>
-              <h1 className='font-lg w-full text-accent font-semibold text-center mb-6 text-3xl'>
+              <h1 className='w-full text-accent text-center mb-6 sm:font-semibold text-2xl sm:text-3xl'>
                 Technologies
               </h1>
               <Image
