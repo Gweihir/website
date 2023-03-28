@@ -82,9 +82,9 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
   }, [])
 
   useEffect(() => {
-    let prevScrollpos = window.pageYOffset
-    const navbar = navbarRef.current
     if (window.innerWidth > 768) {
+      let prevScrollpos = window.pageYOffset
+      const navbar = navbarRef.current
       if (navbar !== null) {
         window.onscroll = function () {
           let currentScrollPos = window.pageYOffset
