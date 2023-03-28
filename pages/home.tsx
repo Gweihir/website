@@ -39,17 +39,20 @@ export default function HomePage(props: Props) {
           <div className='ml-2 mt-5'>
             <Button
               onClick={() => {
-                window.open("https://github.com/Gweihir", "_blank")
+                window.innerWidth > 768
+                  ? window.open("https://github.com/Gweihir")
+                  : (window.location.href = "https://github.com/Gweihir")
               }}
               buttonText={"Contact us"}
               className={"mx-2"}
             />
+
             <Button
               onClick={() => {
-                window.open("https://github.com/Gweihir", "_blank")
+                window.open("https://github.com/Gweihir")
               }}
               buttonText={"Get Started"}
-              className={"mx-2 target_blank"}
+              className={"mx-2"}
               disabled={true}
             />
           </div>

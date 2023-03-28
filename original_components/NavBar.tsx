@@ -84,17 +84,19 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
   useEffect(() => {
     let prevScrollpos = window.pageYOffset
     const navbar = navbarRef.current
-    if (navbar !== null) {
-      window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset
-        if (prevScrollpos > currentScrollPos) {
-          setIsVisible(true)
-          navbar.style.transform = "translateY(0)"
-        } else {
-          setIsVisible(false)
-          navbar.style.transform = "translateY(-100%)"
+    if (window.innerWidth > 768) {
+      if (navbar !== null) {
+        window.onscroll = function () {
+          let currentScrollPos = window.pageYOffset
+          if (prevScrollpos > currentScrollPos) {
+            setIsVisible(true)
+            navbar.style.transform = "translateY(0)"
+          } else {
+            setIsVisible(false)
+            navbar.style.transform = "translateY(-100%)"
+          }
+          prevScrollpos = currentScrollPos
         }
-        prevScrollpos = currentScrollPos
       }
     }
   }, [navbarRef])
