@@ -14,9 +14,7 @@ const links = [
   // { href: "#team", label: "Team" },
   { href: "https://github.com/Gweihir", label: "Contact" },
 ]
-{
-  ;("ml-auto lg:block items-center justify-right max-w-max lg:mr-4 xl:mr-8")
-}
+
 const HamburgerMenu = () => {
   return (
     <div className='relative right-0'>
@@ -38,22 +36,6 @@ const HamburgerMenu = () => {
           leaveTo='opacity-0 translate-y-2 scale-95'
         >
           <Menu.Items className='absolute outline-none -right-12 top-10 mx-6 pl-2 pr-4 py-2 bg-slate-700 border-slate-600 border-x-2 border-b-2'>
-            {links.map(({ href, label }) => (
-              <Menu.Item key={href}>
-                {({ active }) => (
-                  <a
-                    className={`block w-full py-2 px-4 text-sm lg:text-base ${
-                      active ? "text-accent bg-slate-800" : ""
-                    }`}
-                    href={href}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {label}
-                  </a>
-                )}
-              </Menu.Item>
-            ))}
             {links.map(({ href, label }) => (
               <Menu.Item key={href}>
                 {({ active }) => (
@@ -162,8 +144,10 @@ export default function NavBar({ className }: NavBarProps): JSX.Element {
                 className='lg:ml-10 md:ml-5 hover:text-accent'
                 href={href}
                 key={href}
-                target='_blank'
-                rel='noopener noreferrer'
+                {...(href === "https://github.com/Gweihir" && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
               >
                 {label}
               </a>
