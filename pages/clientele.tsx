@@ -18,7 +18,7 @@ export default function UsersPage(props: Props) {
         <div className='w-full flex xl:flex-row flex-col justify-items-between mt-11'>
           {/* Node Operators */}
           <div className='flex flex-row lg:mr-4 justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-2 xl:order-1'>
-            <div className='w-full'>
+            <div className='w-full mx-2 sm:mx-0'>
               <div className='mx-auto'>
                 <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
                   ~ Node Operators ~
@@ -30,7 +30,7 @@ export default function UsersPage(props: Props) {
                   className='xl:pb-10 mx-auto'
                 />
               </div>
-              <p className='text-white text-left mt-6 p-8 xl:mt-0 bg-slate-700 rounded-md'>
+              <p className='text-gray-300 text-left mt-6 p-8 xl:mt-0 bg-slate-700 rounded-md'>
                 The importance of providing reliable infrastructure to decentralized applications
                 cannot be understated. Node operators that implement Gweihir offer a secure and
                 efficient way for developers to utilize Kusama data in their smart contracts on
@@ -52,7 +52,7 @@ export default function UsersPage(props: Props) {
 
               {/* Kusama Users */}
               <div className='flex flex-row justify-center text-left order-2 xl:order-1'>
-                <div className='w-full'>
+                <div className='w-full mx-2 sm:mx-0'>
                   <div className='mx-auto'>
                     <h1 className='text-accent sm:font-semibold mt-10 xl:mt-0 text-lg text-center pb-4'>
                       ~ Kusama Users ~
@@ -65,7 +65,7 @@ export default function UsersPage(props: Props) {
                     />
                   </div>
                   <div className='text-center'>
-                    <p className='text-white justify text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0 xl:w-full lg:w-3/4 w-full mx-auto'>
+                    <p className='text-gray-300 justify text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0 xl:w-full lg:w-3/4 w-full mx-auto'>
                       Gweihir allows Kusama users the opportunity to expand their on-chain
                       productivity into the Ethereum ecosystem, providing limitless utility while
                       not relying on the use of centralized infrastructure. Gweihir is particularly
@@ -83,7 +83,7 @@ export default function UsersPage(props: Props) {
 
           {/* Smart Contract Devs */}
           <div className='flex flex-row lg:ml-4 justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-3 xl:order-3'>
-            <div>
+            <div className='w-full mx-2 sm:mx-0'>
               <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
                 ~ Smart Contract Devs ~
               </h1>
@@ -93,7 +93,7 @@ export default function UsersPage(props: Props) {
                 alt='Image of Gweihir Interacting with Ethereum via Chainlink'
                 className='xl:pb-10 mx-auto'
               />
-              <p className='text-white text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0'>
+              <p className='text-gray-300 text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0'>
                 Gweihir offers novel data-bridging services to smart contract developers. By
                 utilizing a Gweihir oracle in a smart contract, dApps can provide unique
                 functionality tied to events that occur on Kusama. Additionally, by following

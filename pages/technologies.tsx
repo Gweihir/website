@@ -62,7 +62,7 @@ const TechCard: React.FC<TechCardProps> = ({
   return (
     <div className='relative justify-center top-4 md:-top-10 lg:-top-24'>
       <div
-        className={`${borderColor} ${backgroundColor} ${width} ${height} w-full flex flex-wrap justify-start xl:m-10 lg:m-4 m-2 p-6 rounded-md border-2`}
+        className={`${borderColor} ${backgroundColor} ${width} ${height} w-full flex flex-wrap justify-start xl:m-10 lg:m-4 m-2 px-8 pt-6 pb-2 rounded-md border-2`}
       >
         <Image src={littleImage} width={50} height={50} alt='blob' className='pb-4' />
         <h1
