@@ -8,7 +8,7 @@ type Props = {}
 
 export default function HomePage(props: Props) {
   return (
-    <main className='bg-slate-800 flex flex-col xl:min-h-screen_88 lg:min-h-screen_80 md:min-h-screen_70 sm:min-h-screen_40 min-h-screen_10 sm:mt-20 mt-16'>
+    <main className='bg-slate-800 flex flex-col xl:min-h-screen_88 lg:min-h-screen_80 md:min-h-screen_70 sm:min-h-screen_40 min-h-screen_88 sm:mt-20 mt-16'>
       <Image
         width={1100}
         src={lightStripedPolygon}
