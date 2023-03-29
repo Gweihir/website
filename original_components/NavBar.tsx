@@ -44,8 +44,6 @@ const HamburgerMenu = () => {
                       active ? "text-accent bg-slate-800" : ""
                     }`}
                     href={href}
-                    target='_blank'
-                    rel='noopener noreferrer'
                   >
                     {label}
                   </a>
