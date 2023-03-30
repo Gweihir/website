@@ -19,12 +19,12 @@ export default function HomePage(props: Props) {
         width={500}
         src={epicContent}
         alt='Image'
-        className='invisible lg:visible mb-4 lg:w-1/3 xl:w-fit xl:mr-44 lg:mr-6 md:mr-48 mt-60 absolute lg:top-10 md:top-56 top-10 xl:top-0 right-0 opacity-100 animate-fade_in'
+        className='invisible lg:visible mb-4 lg:w-1/3  xl:mr-44 lg:mr-6 md:mr-48 mt-60 absolute lg:top-10 md:top-56 top-10 xl:top-0 right-0 opacity-100 animate-fade_in'
       />
       <div className='flex-1 py-8 px-6 relative'>
         <section
           id='Home'
-          className='mt-10 md:mt-44 sm:pr-24 ml-0 md:ml-7 lg:ml-18 xl:ml-36 lg:w-2/3 xl:w-5/12 w-full'
+          className='mt-10 md:mt-44 sm:pr-24 ml-0 md:ml-7 lg:ml-18 xl:ml-36 lg:w-2/3 xl:w-5/12  w-full'
         >
           <h1 className='text-white text-2xl sm:text-4xl font-medium mb-4 text-left pl-4 pb-4 sm:pb-0'>
             Bridge Kusama Data
