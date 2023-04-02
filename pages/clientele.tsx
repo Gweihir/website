@@ -11,7 +11,7 @@ type Props = {}
 export default function UsersPage(props: Props) {
   return (
     <section id='clientele' className='text-center'>
-      <div className='flex flex-wrap justify-evenly pt-12 pb-20 sm:px-32'>
+      <div className='flex flex-wrap justify-evenly pt-12 sm:px-32'>
         <h1 className='w-full text-accent text-center mb-8 sm:font-semibold text-2xl sm:text-3xl'>
           Our Clientele
         </h1>
@@ -19,17 +19,15 @@ export default function UsersPage(props: Props) {
           {/* Node Operators */}
           <div className='flex flex-row lg:mr-4 justify-center mt-10 xl:mt-52 xl:w-1/3 text-left order-2 xl:order-1'>
             <div className='w-full mx-2 sm:mx-0'>
-              <div className='mx-auto'>
-                <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
-                  ~ Node Operators ~
-                </h1>
-                <Image
-                  src={Servers}
-                  height={200}
-                  alt='Image of Gweihir Interacting with Ethereum via Chainlink'
-                  className='xl:pb-10 mx-auto'
-                />
-              </div>
+              <h1 className='text-accent sm:font-semibold text-lg text-center pb-4'>
+                ~ Node Operators ~
+              </h1>
+              <Image
+                src={Servers}
+                height={200}
+                alt='Image of Gweihir Interacting with Ethereum via Chainlink'
+                className='xl:pb-10 mx-auto'
+              />
               <p className='text-gray-300 text-left mt-6 p-8 xl:mt-0 bg-slate-700 rounded-md'>
                 The importance of providing reliable infrastructure to decentralized applications
                 cannot be understated. Node operators that implement Gweihir offer a secure and
@@ -53,7 +51,7 @@ export default function UsersPage(props: Props) {
               {/* Kusama Users */}
               <div className='flex flex-row justify-center text-left order-2 xl:order-1'>
                 <div className='w-full mx-2 sm:mx-0'>
-                  <div className='mx-auto'>
+                  <div className='mx-auto pt-5'>
                     <h1 className='text-accent sm:font-semibold mt-10 xl:mt-0 text-lg text-center pb-4'>
                       ~ Kusama Users ~
                     </h1>
@@ -94,11 +92,12 @@ export default function UsersPage(props: Props) {
                 className='xl:pb-10 mx-auto'
               />
               <p className='text-gray-300 text-left mt-6 rounded-md bg-slate-700 p-8 xl:mt-0'>
-                Gweihir offers novel data-bridging services to smart contract developers. By
-                utilizing a Gweihir oracle in a smart contract, dApps can provide unique
-                functionality tied to events that occur on Kusama. Additionally, by following
-                Gweihir Utility Protocols (GUPs), smart contracts developers can ensure their
-                interactions with Gweihir oracles are sound and reliable.
+                Smart contract developers can benefit from Gweihir&apos;s ability to leverage
+                Chainlink nodes, providing a secure and efficient method to access off-chain data
+                from Kusama. By incorporating Gweihir oracles and adhering to GUPs, dApps can unlock
+                new use cases and ensure trustworthy interactions with external data sources.
+                Additionally, Gweihir&apos;s infrastructure offers scalability, flexibility, and
+                low-latency for seamless integration with existing smart contract platforms.
               </p>
             </div>
           </div>

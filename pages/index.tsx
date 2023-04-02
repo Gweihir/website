@@ -8,6 +8,7 @@ import Faq from "./faq"
 import UsersPage from "./clientele"
 import Resources from "./resources"
 import ContactPage from "./contact"
+import Team from "./team"
 
 const fbAppId = process.env.FB_APP_ID
 
@@ -65,6 +66,7 @@ export default function Home({}: HomeProps): JSX.Element {
         <HomePage />
         <Technologies />
         <UsersPage />
+        {/* <Team /> */}
         {/* <ContactPage /> */}
         <Resources />
         {/* <Faq /> */}

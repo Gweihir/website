@@ -11,7 +11,7 @@ type Props = {}
 
 export default function Resources(props: Props) {
   return (
-    <section id='resources' className='text-center bg-slate-700 max-w-screen'>
+    <section id='resources' className='text-center bg-slate-700 max-w-screen mt-14'>
       <h1 className='w-full text-accent text-center mb-1 sm:font-semibold text-2xl sm:text-3xl pt-7 sm:pt-10'>
         Resources
       </h1>
