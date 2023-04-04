@@ -1,8 +1,12 @@
 # Custom Dictionary Words
 Devs
+Headshot
 octocat
 parachains
 permissionless
 Polkadot
 SENDGRID
 sharded
+Spiess
+Steeber
+Vendrame
