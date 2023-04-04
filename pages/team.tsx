@@ -50,7 +50,7 @@ const TeamArray = [
 type Props = {}
 
 export default function Team(props: Props) {
-  const [readMore, setReadMore] = useState(Array(TeamArray.length).fill(false))
+  const [readMore, setReadMore] = useState(Array(TeamArray.length).fill(true))
 
   const handleReadMore: MouseEventHandler<HTMLButtonElement> = (event) => {
     const index = Number(event.currentTarget.getAttribute("data-index"))
@@ -63,22 +63,24 @@ export default function Team(props: Props) {
 
   return (
     <main className='bg-slate-700'>
-      <div className='w-4/5 mx-auto mt-20 pt-4 pb-0'>
+      <div className='sm:w-4/5 w-full mx-auto mt-20 pt-4 pb-0'>
         <h1 className='font-semibold text-3xl text-center mt-6 text-accent'>Team</h1>
         <div id='team' className='flex flex-wrap justify-center pt-10 pb-12'>
           {TeamArray.map((team, index) => (
             <div
               key={index}
-              className='w-46 h-1/2 m-2 px-6 pt-6 pb-4 border-2 rounded-md border-slate-600 bg-slate-800'
+              className='h-1/2 sm:w-fit w-full m-2 px-6 pt-6 pb-4 border-2 rounded-md border-slate-600 bg-slate-800'
             >
               <div className='mb-4 flex items-center'>
                 <Image src={team.headshot} alt='A face' width={60} height={60} className='ml-0' />
                 <div className='flex flex-col'>
                   <h1 className='ml-6 text-accent text-lg font-semibold'>{team.name}</h1>
-                  <h1 className='ml-6 text-accent text-sm font-normal w-40 h-10'>{team.title}</h1>
+                  <h1 className='ml-6 text-accent text-sm font-light w-40 h-10'>{team.title}</h1>
                 </div>
               </div>
-              <p className={`mt-4 text-gray-300 w-80 ${readMore[index] && "line-clamp-3"}`}>
+              <p
+                className={`mt-4 text-gray-300 sm:w-80 w-full ${readMore[index] && "line-clamp-3"}`}
+              >
                 {team.bio}
               </p>
               <button className='text-accent pt-1' onClick={handleReadMore} data-index={index}>

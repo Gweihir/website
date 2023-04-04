@@ -1,4 +1,13 @@
-import { useState, SyntheticEvent } from "react"
+import { useState } from "react"
+import AWS from "aws-sdk"
+
+AWS.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: "us-west-1",
+})
+
+const ses = new AWS.SES()
 
 const ContactForm = () => {
   const [name, setName] = useState<string>("")
@@ -14,22 +23,26 @@ const ContactForm = () => {
     setIsLoading(true)
 
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const params = {
+        Destination: {
+          ToAddresses: ["reedkeenan@gmail.com"], // Replace with your email address
         },
-        body: JSON.stringify({
-          to: ["reedkeenan@gmail.com", "hello@steebersolutions.com"],
-          name,
-          email,
-          message,
-        }),
-      })
+        Message: {
+          Body: {
+            Text: {
+              Data: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+            },
+          },
+          Subject: {
+            Data: "New message from your website",
+          },
+        },
+        Source: "reedkeenan@gmail.com", // Replace with your verified email address
+      }
 
-      const data = await response.json()
+      const response = await ses.sendEmail(params).promise()
 
-      if (response.ok) {
+      if (response) {
         setIsSuccess(true)
         setName("")
         setEmail("")
@@ -47,7 +60,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className='max-w-lg mx-auto'>
       <div className='flex flex-col mb-4'>
-        <label htmlFor='name' className='mb-2'>
+        <label htmlFor='name' className='mb-2 text-gray-300'>
           Name:
         </label>
         <input
@@ -60,7 +73,7 @@ const ContactForm = () => {
       </div>
 
       <div className='flex flex-col mb-4'>
-        <label htmlFor='email' className='mb-2'>
+        <label htmlFor='email' className='mb-2 text-gray-300'>
           Email:
         </label>
         <input
@@ -73,7 +86,7 @@ const ContactForm = () => {
       </div>
 
       <div className='flex flex-col mb-4'>
-        <label htmlFor='message' className='mb-2'>
+        <label htmlFor='message' className='mb-2 text-gray-300'>
           Message:
         </label>
         <textarea
