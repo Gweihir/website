@@ -52,7 +52,10 @@ export default function Home({}: HomeProps): JSX.Element {
         <meta property='og:image:alt' content='Project Gweihir thumbnail image' />
         {/* TWITTER */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Project Gweihir, Expanding What is Possible' />
+        <meta
+          name='twitter:title'
+          content='Discover Project Gweihir: Bridging Kusama to Ethereum via Chainlink'
+        />
         <meta
           name='twitter:description'
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
