@@ -12,11 +12,8 @@ export default function Document() {
           property='og:title'
           content='Discover Project Gweihir: Bridging Kusama to Ethereum via Chainlink'
         />
-        <meta
-          property='og:image'
-          content='https://website-one-delta-18.vercel.app/Images/epic_thumbnail.png'
-        />
-        <meta property='og:url' content='https://website-one-delta-18.vercel.app' />
+        <meta property='og:image' content='https://gweihir.io/Images/epic_thumbnail.png' />
+        <meta property='og:url' content='https://gweihir.io' />
         <meta
           property='og:description'
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
@@ -32,10 +29,7 @@ export default function Document() {
           name='twitter:description'
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
         />
-        <meta
-          name='twitter:image'
-          content='https://website-one-delta-18.vercel.app/Images/epic_thumbnail.png'
-        />
+        <meta name='twitter:image' content='https://gweihir.io/Images/epic_thumbnail.png' />
       </Head>
       <body>
         <Main />
