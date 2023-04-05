@@ -66,8 +66,8 @@ export default function Home({}: HomeProps): JSX.Element {
         <HomePage />
         <Technologies />
         <UsersPage />
-        {/* <Team /> */}
-        {/* <ContactPage /> */}
+        <Team />
+        <ContactPage />
         <Resources />
         {/* <Faq /> */}
       </Layout>
