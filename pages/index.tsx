@@ -49,7 +49,7 @@ export default function Home({}: HomeProps): JSX.Element {
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
         />
         <meta property='og:image:alt' content='Project Gweihir thumbnail image' />
-        <meta property='fb:app_id' content={`${process.env.FB_APP_ID}`} />
+        <meta property='fb:app:id' content={`${process.env.FB_APP_ID}`} />
         {/* TWITTER */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
