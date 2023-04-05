@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document"
 
 const fbAppId = process.env.FB_APP_ID
+
 export default function Document() {
   return (
     <Html lang='en'>
