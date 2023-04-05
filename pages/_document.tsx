@@ -17,7 +17,7 @@ export default function Document() {
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
         />
         <meta property='og:image:alt' content='Project Gweihir thumbnail image' />
-        <meta property='fb:app_id' content={`${fbAppId ?? ""}`} />
+        <meta property='fb:app_id' content={`${process.env.FB_APP_ID}`} />
         {/* TWITTER */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
