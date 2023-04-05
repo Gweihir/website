@@ -1,19 +1,16 @@
 import { Html, Head, Main, NextScript } from "next/document"
 
-const fbAppId = process.env.FB_APP_ID
-
 export default function Document() {
   return (
     <Html lang='en'>
       <Head>
+        <meta property='og:url' content='https://gweihir.io' />
         <meta property='og:type' content='website' />
-        <meta property='fb:app_id' content={fbAppId} />
         <meta
           property='og:title'
           content='Discover Project Gweihir: Bridging Kusama to Ethereum via Chainlink'
         />
         <meta property='og:image' content='https://gweihir.io/Images/epic_thumbnail.png' />
-        <meta property='og:url' content='https://gweihir.io' />
         <meta
           property='og:description'
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
