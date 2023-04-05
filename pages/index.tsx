@@ -10,6 +10,8 @@ import Resources from "./resources"
 import ContactPage from "./contact"
 import Team from "./team"
 
+const fbAppId = process.env.FB_APP_ID
+
 const inter = Inter({ subsets: ["latin"] })
 
 interface LayoutProps {
@@ -47,6 +49,7 @@ export default function Home({}: HomeProps): JSX.Element {
           content={`An open-source project to service Kusama's chain data to the Ethereum network via a Chainlink external adapter.`}
         />
         <meta property='og:image:alt' content='Project Gweihir thumbnail image' />
+        <meta property='fb:app_id' content={`${fbAppId ?? ""}`} />
         {/* TWITTER */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
