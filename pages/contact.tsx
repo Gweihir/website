@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react"
 import ReCAPTCHA from "react-google-recaptcha"
 import Head from "next/head"
 
-const SiteKey = process.env.CAP_SITE_KEY ?? ""
+const SiteKey = process.env.CAP_SITE_KEY
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xlekpynj")
@@ -42,7 +42,7 @@ function ContactForm() {
         <title>Contact Us</title>
       </Head>
       <div>
-        <ReCAPTCHA sitekey={SiteKey} onChange={handleRecaptchaChange} />
+        <ReCAPTCHA sitekey={`${SiteKey}`} onChange={handleRecaptchaChange} />
       </div>
       <form
         onSubmit={onSubmit}
