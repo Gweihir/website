@@ -1,40 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import ReCAPTCHA from "react-google-recaptcha"
 import Head from "next/head"
 
-const SiteKey = process.env.CAP_SITE_TEST_KEY ?? ""
-
 function ContactForm() {
   const [state, handleSubmit] = useForm("xlekpynj")
+  const [captcha, setCaptcha] = useState(false)
 
   const handleRecaptchaChange = (token: string | null) => {
     // handle recaptcha change event here if needed
+    setCaptcha(true)
     console.log(token)
   }
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const formData = new FormData(event.target as HTMLFormElement)
-    const data = {
-      email: formData.get("email") as string,
-      message: formData.get("message") as string,
-    }
-
-    // Submit the form data to Formspree
-    try {
-      const response = await handleSubmit(data)
-
-      if (response.ok) {
-        alert("Form submitted successfully!")
-      } else {
-        alert("Form submission failed. Please try again later.")
-        console.log(response)
-      }
-    } catch (error) {
-      alert("Form submission failed. Please try again later.")
-    }
+  const onSubmit = (error: string) => {
+    alert("Form submission failed. Please try again later.")
   }
+
+  const SubmitHandler = () => {
+    handleSubmit
+    alert("Form submitted successfully!")
+  }
+
+  // Is there any hook that waits till the action is completed then does another thing
 
   return (
     <div>
@@ -48,7 +36,7 @@ function ContactForm() {
         />
       </div>
       <form
-        onSubmit={onSubmit}
+        onSubmit={() => (captcha ? SubmitHandler : onSubmit)}
         action='https://formspree.io/f/xlekpynj'
         method='POST'
         className='max-w-lg mx-auto'
