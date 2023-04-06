@@ -42,7 +42,10 @@ function ContactForm() {
         <title>Contact Us</title>
       </Head>
       <div>
-        <ReCAPTCHA sitekey={`${SiteKey}`} onChange={handleRecaptchaChange} />
+        <ReCAPTCHA
+          sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+          onChange={handleRecaptchaChange}
+        />
       </div>
       <form
         onSubmit={onSubmit}
