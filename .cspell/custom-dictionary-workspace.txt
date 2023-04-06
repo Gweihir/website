@@ -1,13 +1,17 @@
 # Custom Dictionary Words
 createclientv
 Devs
+formspree
 Headshot
 octocat
 parachains
 permissionless
 Polkadot
+recaptcha
 SENDGRID
 sharded
+sitekey
 Spiess
 Steeber
 Vendrame
+xlekpynj

@@ -1,39 +1,56 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import ReCAPTCHA from "react-google-recaptcha"
 import Head from "next/head"
 
-const SiteKey = process.env.CAP_SITE_KEY ?? ""
+const TestSiteKey = process.env.CAP_SITE_TEST_KEY
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xlekpynj")
+  const [isHuman, setIsHuman] = useState<boolean | null>(null)
+  const [state, handleSubmitForm] = useForm("xlekpynj")
 
-  const handleRecaptchaChange = (token: string | null) => {
-    // handle recaptcha change event here if needed
-    console.log(token)
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>
   }
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const formData = new FormData(event.target as HTMLFormElement)
-    const data = {
-      email: formData.get("email") as string,
-      message: formData.get("message") as string,
-    }
-
-    // Submit the form data to Formspree
+  const submitForm = async (formData: FormData) => {
     try {
-      const response = await handleSubmit(data)
+      const response = await fetch("/api/submit-contact-form", {
+        method: "POST",
+        body: formData,
+      })
 
       if (response.ok) {
-        alert("Form submitted successfully!")
+        handleSubmitForm(formData) // submit form data to Formspree
       } else {
-        alert("Form submission failed. Please try again later.")
-        console.log(response)
+        throw new Error("There was an error submitting the form.")
       }
     } catch (error) {
-      alert("Form submission failed. Please try again later.")
+      console.error(error)
+      alert("There was an error submitting the form. Please try again later.")
     }
+  }
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    // Check whether the user has completed the reCAPTCHA verification
+    if (isHuman) {
+      // Get the form data
+      const formData = new FormData(event.currentTarget)
+
+      // Add the reCAPTCHA response to the form data
+      formData.append("g-recaptcha-response", isHuman.toString())
+
+      // Submit the form data to the server
+      await submitForm(formData)
+    } else {
+      alert("Please complete the reCAPTCHA verification before submitting the form.")
+    }
+  }
+
+  const handleRecaptchaChange = () => {
+    setIsHuman(true)
   }
 
   return (
@@ -42,10 +59,13 @@ function ContactForm() {
         <title>Contact Us</title>
       </Head>
       <div>
-        <ReCAPTCHA sitekey={SiteKey} onChange={handleRecaptchaChange} />
+        <ReCAPTCHA
+          sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+          onChange={handleRecaptchaChange}
+        />
       </div>
       <form
-        onSubmit={onSubmit}
+        onSubmit={handleSubmit}
         action='https://formspree.io/f/xlekpynj'
         method='POST'
         className='max-w-lg mx-auto'
