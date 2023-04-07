@@ -20,10 +20,11 @@ function Contact() {
       const formData = new FormData(formElement) // create FormData object from form element
       const email = formData.get("email") // get email value from FormData
       const message = formData.get("message") // get message value from FormData
+      const name = formData.get("name") // get message value from FormData
 
       try {
         await new Promise<void>((resolve) => {
-          handleSubmit({ email, message }).then(() => resolve()) // include email and message in submissionData and resolve when handleSubmit is complete
+          handleSubmit({ email, message, name }).then(() => resolve()) // include email and message in submissionData and resolve when handleSubmit is complete
         })
 
         alert("Form submitted successfully!")
@@ -74,23 +75,23 @@ function Contact() {
             />
           </div>
           <div className='mb-4'>
-            <label htmlFor='email' className='block text-gray-300 font-bold mb-2'>
+            <label htmlFor='name' className='block text-gray-300 font-bold mb-2'>
               Name
             </label>
             <input
-              id='email'
-              type='email'
-              name='email'
+              id='name'
+              type='name'
+              name='name'
               className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
             <ValidationError
-              prefix='Email'
-              field='email'
+              prefix='Name'
+              field='name'
               errors={state.errors}
               className='text-red-500'
             />
           </div>
-          <div className='mb-6'>
+          <div className='sm:mb-6 mb-4'>
             <label htmlFor='message' className='block text-gray-300 font-bold mb-2'>
               Message
             </label>
