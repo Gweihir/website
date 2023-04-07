@@ -62,7 +62,7 @@ export default function Team(props: Props) {
   }
 
   return (
-    <main id='team' className='bg-slate-700'>
+    <main id='team' className='bg-slate-700 rounded-md mx-0 xl:mx-20'>
       <div className='sm:w-4/5 w-full mx-auto mt-20 pt-4 pb-0'>
         <h1 className='font-semibold text-3xl text-center mt-6 text-accent'>Team</h1>
         <div id='team' className='flex flex-wrap justify-center pt-10 pb-12'>
