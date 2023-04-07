@@ -24,7 +24,7 @@ function Contact() {
 
       try {
         await new Promise<void>((resolve) => {
-          handleSubmit({ email, message, name }).then(() => resolve()) // include email and message in submissionData and resolve when handleSubmit is complete
+          handleSubmit({ email, name, message }).then(() => resolve()) // include email and message in submissionData and resolve when handleSubmit is complete
         })
 
         alert("Form submitted successfully!")
