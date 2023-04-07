@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import ReCAPTCHA from "react-google-recaptcha"
 import Head from "next/head"
@@ -6,6 +6,7 @@ import Head from "next/head"
 function Contact() {
   const [state, handleSubmit] = useForm("xlekpynj")
   const [captcha, setCaptcha] = useState(false)
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null) // Create a ref for the ReCAPTCHA component
 
   const handleRecaptchaChange = (token: string | null) => {
     // handle recaptcha change event here if needed
@@ -31,6 +32,7 @@ function Contact() {
 
         formElement.reset()
         setCaptcha(false)
+        recaptchaRef.current?.reset()
       } catch (error) {
         alert("Form submission failed. Please try again later.")
       }
@@ -117,6 +119,7 @@ function Contact() {
             </button>{" "}
             <div className='flex justify-center items-center'>
               <ReCAPTCHA
+                ref={recaptchaRef} // Pass the ref to the ReCAPTCHA component
                 sitekey='6LfEu2ElAAAAAB1e1lmhQtSx0ZMkukfx1UGOY4FV'
                 onChange={handleRecaptchaChange}
               />
