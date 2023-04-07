@@ -5,44 +5,44 @@ import SpencerHeadshot from "../public/Images/Team/SpencerHeadshot.png"
 import SpiessHeadshot from "../public/Images/Team/SpiessHeadshot.png"
 import KeenanHeadshot from "../public/Images/Team/KeenanHeadshot.png"
 import AndreaHeadshot from "../public/Images/Team/AndreaHeadshot.png"
-import TylerHeadshot from "../public/Images/Team/blank-profile-picture.png"
+import TylerHeadshot from "../public/Images/Team/TylerHeadshot.png"
 
 const TeamArray = [
   {
     name: `Adam Steeber`,
     title: "Founder",
-    bio: "Adam has been an active member in the Kusama ecosystem since April of 2021 and has a bachelor's degree in economics. He runs a validator node on Kusama and is interested in realizing the Web3 paradigm. His focuses are interoperability and solving real-world problems using blockchain technology.",
+    bio: "Active member in the Kusama ecosystem since April of 2021 with a bachelor's degree in economics. Adam runs a validator node on Kusama and is interested in realizing the Web3 paradigm. His focuses are interoperability and solving real-world problems using blockchain technology.",
     headshot: AdamHeadshot,
   },
 
   {
     name: `Spencer Brown`,
     title: "Lead Developer & Project Engineer",
-    bio: "Spencer is a software engineer specializing in full-stack web development with a bachelor's degree in software engineering from Arizona State University.",
+    bio: "Software engineer specializing in full-stack web development with a bachelor's degree in software engineering from Arizona State University.",
     headshot: SpencerHeadshot,
   },
   {
     name: `Nick Spiess`,
     title: "Marketing Coordinator",
-    bio: "Nick is a software developer and has been active in the blockchain ecosystem since 2017.  He is passionate about Web3 and the potential it holds to create a more equitable world.",
+    bio: "Software developer active in the blockchain ecosystem since 2017. Nick is passionate about Web3 and the potential it holds to create a more equitable world.",
     headshot: SpiessHeadshot,
   },
   {
     name: `Keenan Reed`,
     title: "Associate Developer & Frontend Director",
-    bio: "Keenan is a frontend web developer with a background in writing, editing, and visual design. Recently, his focus has been shifting toward dApps and the Web3 ecosystem.",
+    bio: "Frontend web developer with a background in writing, editing, and visual design. Recently, Keenan's focus has been shifting toward dApps and the Web3 ecosystem.",
     headshot: KeenanHeadshot,
   },
   {
     name: `Andrea Vendrame`,
     title: "Full-stack dApp & Solidity developer",
-    bio: "Andrea is a passionate software engineer specializing in full-stack web development with a master's degree in Design and Development of Software Systems from the University of Udine (Italy).",
+    bio: "Passionate software engineer specializing in full-stack web development with a master's degree in Design and Development of Software Systems from the University of Udine (Italy).",
     headshot: AndreaHeadshot,
   },
   {
     name: `Tyler`,
-    title: "",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "Consultation & Review",
+    bio: "Self-taught and self-motivated software developer. Tyler helps design and develop custom software solutions tailored specifically to the needs of his clients.",
     headshot: TylerHeadshot,
   },
 ]
@@ -62,7 +62,7 @@ export default function Team(props: Props) {
   }
 
   return (
-    <main className='bg-slate-700'>
+    <main id='team' className='bg-slate-700'>
       <div className='sm:w-4/5 w-full mx-auto mt-20 pt-4 pb-0'>
         <h1 className='font-semibold text-3xl text-center mt-6 text-accent'>Team</h1>
         <div id='team' className='flex flex-wrap justify-center pt-10 pb-12'>
@@ -79,7 +79,7 @@ export default function Team(props: Props) {
                 </div>
               </div>
               <p
-                className={`mt-4 text-gray-300 sm:w-80 w-full ${readMore[index] && "line-clamp-3"}`}
+                className={`mt-4 text-gray-300 sm:w-80 w-full ${readMore[index] && "line-clamp-2"}`}
               >
                 {team.bio}
               </p>

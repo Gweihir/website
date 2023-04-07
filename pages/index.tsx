@@ -7,12 +7,20 @@ import NavBar from "@/original_components/NavBar"
 import Faq from "./faq"
 import UsersPage from "./clientele"
 import Resources from "./resources"
-import ContactPage from "./contact"
 import Team from "./team"
 
 const fbAppId = process.env.FB_APP_ID
 
 const inter = Inter({ subsets: ["latin"] })
+const links = [
+  { href: "#technologies", label: "Technologies" },
+  { href: "#clientele", label: "Clientele" },
+  { href: "#resources", label: "Resources" },
+  // { href: "#roadMap", label: "Road Map" },
+  // { href: "#faq", label: "FAQ" },
+  { href: "#team", label: "Team" },
+  { href: "/contact", label: "Contact" },
+]
 
 interface LayoutProps {
   children: React.ReactNode
@@ -21,7 +29,8 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className='min-h-screen'>
-      <NavBar className='z-50' />
+      <NavBar className='z-50' links={links} />
+
       <div>{children}</div>
     </div>
   )
@@ -66,8 +75,7 @@ export default function Home({}: HomeProps): JSX.Element {
         <HomePage />
         <Technologies />
         <UsersPage />
-        {/* <Team /> */}
-        {/* <ContactPage /> */}
+        <Team />
         <Resources />
         {/* <Faq /> */}
       </Layout>
