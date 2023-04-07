@@ -98,7 +98,7 @@ function Contact() {
             <textarea
               id='message'
               name='message'
-              className='shadow appearance-none border rounded w-full sm:py-14 py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='shadow appearance-none border rounded w-full px-3 sm:h-40 h-24 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
             <ValidationError
               prefix='Message'
