@@ -42,7 +42,7 @@ function Contact() {
     <section className='flex flex-row justify-center'>
       <div
         id='contact'
-        className='sm:mt-36 mt-6 pt-16 bg-slate-600 sm:h-full h-screen sm:pb-16 pb-8 rounded-md w-full sm:w-4/5 m:w-3/5 lg:w-4/6 xl:w-1/2 mx-2'
+        className='sm:mt-36 mt-6 pt-16 sm:border-accent border-2 bg-slate-700 sm:h-full h-screen sm:pb-16 pb-8 rounded-md w-full sm:w-4/5 m:w-3/5 lg:w-4/6 xl:w-1/2 mx-2'
       >
         <h1 className='w-full text-accent text-center sm:font-semibold text-2xl sm:text-3xl pt-7 sm:pt-0'>
           Contact Us
