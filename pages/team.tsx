@@ -40,7 +40,7 @@ const TeamArray = [
     headshot: AndreaHeadshot,
   },
   {
-    name: `Tyler`,
+    name: `Tyler Hanson`,
     title: "Consultation & Review",
     bio: "Self-taught and self-motivated software developer. Tyler helps design and develop custom software solutions tailored specifically to the needs of his clients.",
     headshot: TylerHeadshot,
