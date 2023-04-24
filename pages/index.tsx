@@ -4,7 +4,6 @@ import { Inter } from "@next/font/google"
 import HomePage from "./home"
 import Technologies from "./technologies"
 import NavBar from "@/original_components/NavBar"
-import Faq from "./faq"
 import UsersPage from "./clientele"
 import Resources from "./resources"
 import Team from "./team"
@@ -77,7 +76,6 @@ export default function Home({}: HomeProps): JSX.Element {
         <UsersPage />
         <Team />
         <Resources />
-        {/* <Faq /> */}
       </Layout>
     </>
   )
