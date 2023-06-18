@@ -55,7 +55,6 @@ export default function HomePage(props: Props) {
               }}
               buttonText={"Get Started"}
               className={"mx-2"}
-              disabled={true}
             />
           </div>
         </section>

@@ -10,6 +10,7 @@ import Team from "./team"
 
 const fbAppId = process.env.FB_APP_ID
 
+//TODO delete inter?
 const inter = Inter({ subsets: ["latin"] })
 const links = [
   { href: "#technologies", label: "Technologies" },
