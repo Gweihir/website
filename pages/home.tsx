@@ -51,7 +51,7 @@ export default function HomePage(props: Props) {
 
             <Button
               onClick={() => {
-                window.open("https://github.com/Gweihir")
+                window.open("https://gweihir.app")
               }}
               buttonText={"Get Started"}
               className={"mx-2"}
