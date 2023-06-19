@@ -16,8 +16,6 @@ const links = [
   { href: "#technologies", label: "Technologies" },
   { href: "#clientele", label: "Clientele" },
   { href: "#resources", label: "Resources" },
-  // { href: "#roadMap", label: "Road Map" },
-  // { href: "#faq", label: "FAQ" },
   { href: "#team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ]
