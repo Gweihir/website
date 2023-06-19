@@ -41,7 +41,7 @@ export default function HomePage(props: Props) {
               onClick={() => {
                 window.open("https://gweihir.app")
               }}
-              className='px-4 py-2 mt-6 md:ml-9 font-semibold cursor-pointer text-xl rounded-full text-slate-900 hover:from-secondary hover:to-accentMono active:from-secondary active:to-thirdinary bg-gradient-to-br from-primary to-accent'
+              className='px-4 py-2 mt-6 md:ml-9 font-semibold cursor-pointer text-xl rounded-full text-slate-900 hover:from-secondary hover:to-accentMono active:from-secondary active:to-thirdinary bg-gradient-to-br from-primary to-accent transition duration-300'
             >
               <p>Try Testnet dApp</p>
             </button>
