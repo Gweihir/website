@@ -19,9 +19,9 @@ export default function HomePage(props: Props) {
         width={500}
         src={epicContent}
         alt='Image'
-        className='invisible lg:visible mb-4 lg:w-1/3 xl:w-[500px] xl:mr-44 lg:mr-6 mt-60 absolute lg:top-10 md:top-56 top-10 xl:top-0 right-0 opacity-100 animate-fade_in'
+        className='invisible lg:visible mb-4 lg:w-1/3 xl:w-[500px] xl:mr-44 lg:mr-6 mt-60 absolute lg:top-10 md:top-56 top-10 xl:top-0 right-0 opacity-100 animate-fade_in hover:animate-spin'
       />
-      <div className='flex-1 py-8 px-6 relative'>
+      <div className='flex-1 py-8 px-6 relative animate-fade_in'>
         <section
           id='Home'
           className='mt-10 md:mt-44 sm:pr-24 ml-0 md:ml-7 lg:ml-18 xl:ml-36 lg:w-2/3 xl:w-5/12  w-full'
@@ -36,26 +36,15 @@ export default function HomePage(props: Props) {
             Gweihir provides smart contracts the ability to bridge Kusama Data to the Ethereum
             blockchain via the Chainlink network using a secure process.
           </p>
-          <div className='ml-2 mt-5'>
-            <Button
-              onClick={() => {
-                if (window.innerWidth > 768) {
-                  window.open("/contact")
-                } else {
-                  window.location.href = "/contact"
-                }
-              }}
-              buttonText={"Contact Us"}
-              className={"mx-2"}
-            />
-
-            <Button
+          <div className='w-full flex flex-row justify-center sm:justify-start pt-5 sm:pt-0'>
+            <button
               onClick={() => {
                 window.open("https://gweihir.app")
               }}
-              buttonText={"Get Started"}
-              className={"mx-2"}
-            />
+              className='px-4 py-2 mt-6 md:ml-9 font-semibold cursor-pointer text-xl rounded-full text-slate-900 hover:from-secondary hover:to-accentMono active:from-secondary active:to-thirdinary bg-gradient-to-br from-primary to-accent'
+            >
+              <p>Try Testnet dApp</p>
+            </button>
           </div>
         </section>
       </div>

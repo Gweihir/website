@@ -70,10 +70,16 @@ const TechCard: React.FC<TechCardProps> = ({
         >
           {title}
         </h1>
-        <div className=''>
-          <p className={`${bodyTextColor} text-left ${!readMore && "sm:line-clamp-12"}`}>{body}</p>
+        <div>
+          <p
+            className={`${bodyTextColor} transform duration-300 text-left ${
+              !readMore && "sm:line-clamp-12"
+            }`}
+          >
+            {body}
+          </p>
           <button className='text-accent invisible md:visible' onClick={handleReadMore}>
-            {!readMore ? "-read more-" : "-close-"}
+            {!readMore ? "- read more -" : "- read less -"}
           </button>
         </div>
       </div>
