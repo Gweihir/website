@@ -16,8 +16,8 @@ const inter = Inter({ subsets: ["latin"] })
 const links = [
   { href: "#technologies", label: "Technologies" },
   { href: "#clientele", label: "Clientele" },
-  { href: "#resources", label: "Resources" },
   { href: "#team", label: "Team" },
+  { href: "#resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ]
 
