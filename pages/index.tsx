@@ -7,6 +7,7 @@ import NavBar from "@/original_components/NavBar"
 import UsersPage from "./clientele"
 import Resources from "./resources"
 import Team from "./team"
+import BirdHead from "@/original_components/BirdHead"
 
 const fbAppId = process.env.FB_APP_ID
 
@@ -70,6 +71,7 @@ export default function Home({}: HomeProps): JSX.Element {
         <meta name='twitter:image' content='https://gweihir.io/Images/epic_thumbnail.png' />
       </Head>
       <Layout>
+        <BirdHead />
         <HomePage />
         <Technologies />
         <UsersPage />

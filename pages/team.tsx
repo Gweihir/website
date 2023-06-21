@@ -64,12 +64,14 @@ export default function Team(props: Props) {
   return (
     <main id='team' className='bg-slate-700 rounded-md mx-0 xl:mx-20'>
       <div className='sm:w-4/5 w-full mx-auto mt-20 pt-4 pb-0'>
-        <h1 className='font-semibold text-3xl text-center mt-6 text-accent'>Team</h1>
-        <div id='team' className='flex flex-wrap justify-center pt-10 pb-12'>
+        <h1 className='w-full text-accent text-center sm:font-semibold text-2xl sm:text-3xl pt-4 sm:pt-5'>
+          Team
+        </h1>
+        <div id='team' className='flex flex-wrap justify-center pt-6 pb-12'>
           {TeamArray.map((team, index) => (
             <div
               key={index}
-              className='h-1/2 sm:w-fit w-full m-2 px-6 pt-6 pb-4 border-2 rounded-md border-slate-600 bg-slate-800'
+              className=' hover:scale-105 transition duration-300 h-1/2 sm:w-fit w-full m-2 px-6 pt-6 pb-4 border-2 rounded-md border-slate-600 bg-slate-800'
             >
               <div className='mb-4 flex items-center'>
                 <Image src={team.headshot} alt='A face' width={60} height={60} className='ml-0' />
@@ -84,7 +86,7 @@ export default function Team(props: Props) {
                 {team.bio}
               </p>
               <button className='text-accent pt-1' onClick={handleReadMore} data-index={index}>
-                {readMore[index] ? "-read more-" : "-close-"}
+                {readMore[index] ? "- read more -" : "- read less -"}
               </button>
             </div>
           ))}

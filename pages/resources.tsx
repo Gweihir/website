@@ -12,12 +12,12 @@ type Props = {}
 export default function Resources(props: Props) {
   return (
     <section id='resources' className='text-center bg-slate-700 max-w-screen mt-14'>
-      <h1 className='w-full text-accent text-center mb-1 sm:font-semibold text-2xl sm:text-3xl pt-7 sm:pt-10'>
+      <h1 className='w-full text-accent text-center mb-1 sm:font-semibold text-2xl sm:text-3xl pt-5 sm:pt-8'>
         Resources
       </h1>
       <div className='flex flex-col'>
-        <div className='flex flex-row justify-between xl:px-32 mx-auto w-full'>
-          <div className='w-1/4 rounded-mds my-6 flex items-center flex-col space-y-6'>
+        <div className='flex flex-row justify-between xl:px-32 mx-auto w-full sm:w-3/4 rounded bg-slate-700'>
+          <div className='w-1/4 rounded-mds my-6 flex items-center flex-col space-y-6 justify-center'>
             <div className='flex items-center'>
               <h1 className='text-accent text-start lg:text-3xl md:text-xl sm:text-md text-sm font-normal lg:pr-3 md:pr-2 pr-1'>
                 Gweihir
@@ -34,7 +34,7 @@ export default function Resources(props: Props) {
                 src={EpicContent}
                 height={75}
                 alt='Gweihir Icon'
-                className='pb-5 cursor-pointer hover:animate-bounce'
+                className='pb-5 cursor-pointer hover:scale-110 transition duration-300'
               />
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function Resources(props: Props) {
                 src={Chainlink}
                 height={75}
                 alt='Chainlink Icon'
-                className='pb-5 cursor-pointer hover:animate-bounce'
+                className='pb-5 cursor-pointer hover:scale-110 transition duration-300'
               />
             </Link>
           </div>
@@ -60,7 +60,7 @@ export default function Resources(props: Props) {
                 src={Kusama}
                 height={75}
                 alt='Kusama Icon'
-                className='pb-5 cursor-pointer hover:animate-bounce'
+                className='pb-5 cursor-pointer hover:scale-110 transition duration-300'
               />
             </Link>
           </div>
@@ -73,7 +73,7 @@ export default function Resources(props: Props) {
                 src={Eth}
                 height={75}
                 alt='GitHub Icon'
-                className=' pb-5 cursor-pointer hover:animate-bounce'
+                className=' pb-5 cursor-pointer hover:scale-110 transition duration-300'
               />
             </Link>
           </div>

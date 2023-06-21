@@ -89,11 +89,11 @@ export default function NavBar({ className, links }: NavBarProps): JSX.Element {
               width={48}
               height={48}
             />
-            <div className='text-lg font-medium pl-3'>Gweihir</div>
+            <div className='text-lg font-semibold pl-3 tracking-wider'>Gweihir</div>
           </Link>
         </div>
         {!isMobile ? (
-          <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 md:text-sm lg:text-base'>
+          <div className='hidden ml-auto md:block items-center justify-right max-w-max lg:mr-4 xl:mr-8 lg:text-lg tracking-wider font-semibold'>
             {links.map(({ href, label }) => (
               <a
                 className='lg:ml-10 md:ml-5 hover:text-accent'
@@ -132,7 +132,7 @@ export default function NavBar({ className, links }: NavBarProps): JSX.Element {
                     <Menu.Item key={href}>
                       {({ active }) => (
                         <a
-                          className={`block w-full py-2 px-4 text-sm lg:text-base ${
+                          className={`block w-full py-2 px-4 text-md tracking-wider font-semibold ${
                             active ? "text-accent bg-slate-800" : ""
                           }`}
                           href={href}
